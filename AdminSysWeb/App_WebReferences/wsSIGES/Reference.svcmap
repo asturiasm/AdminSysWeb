@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b862c339-f544-4936-aa31-c2bab122abbe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://sigesorvonton/SIGESDataRetrieval/DataRetrievalWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataRetrievalWCF1.disco" MetadataType="Disco" ID="23a9136c-73c8-4951-b52a-cb9ada4af83f" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?disco" />
+    <MetadataFile FileName="DataRetrievalWCF9.xsd" MetadataType="Schema" ID="7163104e-77c8-413f-8947-148bbd9a836b" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd6" />
+    <MetadataFile FileName="DataRetrievalWCF92.xsd" MetadataType="Schema" ID="c193eb8e-e4c4-4229-a333-5a4a8e9db6d6" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataRetrievalWCF93.xsd" MetadataType="Schema" ID="9b508beb-d6cf-4b6b-aceb-468b329846ce" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataRetrievalWCF10.xsd" MetadataType="Schema" ID="e043c046-30d7-4f1d-bb10-7a847bbb42df" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd9" />
+    <MetadataFile FileName="DataRetrievalWCF94.xsd" MetadataType="Schema" ID="68c9d17b-86b6-4886-9d10-98f7dcefd780" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd8" />
+    <MetadataFile FileName="DataRetrievalWCF95.xsd" MetadataType="Schema" ID="98fcf25f-a17c-4a7b-b013-774e18d6f9de" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd5" />
+    <MetadataFile FileName="DataRetrievalWCF96.xsd" MetadataType="Schema" ID="a202f3f4-9261-4315-98fa-998b61f5d9b2" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd4" />
+    <MetadataFile FileName="DataRetrievalWCF97.xsd" MetadataType="Schema" ID="d31d34ed-9f26-46c5-8714-34bb0549d754" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd7" />
+    <MetadataFile FileName="DataRetrievalWCF98.xsd" MetadataType="Schema" ID="c949f680-084b-4c0e-b383-bde90780521c" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataRetrievalWCF1.wsdl" MetadataType="Wsdl" ID="c98faa97-8f8f-4992-93af-caf9ae911972" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?wsdl" />
+    <MetadataFile FileName="DataRetrievalWCF99.xsd" MetadataType="Schema" ID="236a6fdb-e7e1-4b04-9e2d-f12a625a5f69" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

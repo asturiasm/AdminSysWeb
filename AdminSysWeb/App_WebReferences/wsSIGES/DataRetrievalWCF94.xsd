@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Clasificadores_POCO" elementFormDefault="qualified" targetNamespace="Clasificadores_POCO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfclsEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsEntidad" nillable="true" type="tns:clsEntidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsEntidad" nillable="true" type="tns:ArrayOfclsEntidad" />
+  <xs:complexType name="clsEntidad">
+    <xs:sequence>
+      <xs:element name="Comportamiento" nillable="true" type="xs:string" />
+      <xs:element name="Ejercicio" type="xs:int" />
+      <xs:element name="Entidad" type="xs:int" />
+      <xs:element name="Nombre" nillable="true" type="xs:string" />
+      <xs:element name="UD" type="xs:int" />
+      <xs:element name="UE" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsEntidad" nillable="true" type="tns:clsEntidad" />
+  <xs:simpleType name="ModuloSIGES">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PreOrden" />
+      <xs:enumeration value="OrdenCompra" />
+      <xs:enumeration value="ExpGasto" />
+      <xs:enumeration value="ProcesoCompra" />
+      <xs:enumeration value="Contratos" />
+      <xs:enumeration value="Nomina" />
+      <xs:enumeration value="ProgramacionSNIP" />
+      <xs:enumeration value="EjecucionSNIP" />
+      <xs:enumeration value="ProgramacionPpR" />
+      <xs:enumeration value="EjecucionPpR" />
+      <xs:enumeration value="ProgramacionNomina" />
+      <xs:enumeration value="PagosAMunicipios" />
+      <xs:enumeration value="Administracion" />
+      <xs:enumeration value="Fideicomisos" />
+      <xs:enumeration value="CatalogoInsumos" />
+      <xs:enumeration value="CatalogoSistema" />
+      <xs:enumeration value="CDP" />
+      <xs:enumeration value="Otro" />
+      <xs:enumeration value="NominaPpR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ModuloSIGES" nillable="true" type="tns:ModuloSIGES" />
+  <xs:complexType name="ArrayOfclsUnidadCompradora">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsUnidadCompradora" nillable="true" type="tns:clsUnidadCompradora" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsUnidadCompradora" nillable="true" type="tns:ArrayOfclsUnidadCompradora" />
+  <xs:complexType name="clsUnidadCompradora">
+    <xs:sequence>
+      <xs:element name="Ejercicio" type="xs:int" />
+      <xs:element name="Nombre" nillable="true" type="xs:string" />
+      <xs:element name="PerfilCentroCosto" nillable="true" type="xs:string" />
+      <xs:element name="PerfilCompras" nillable="true" type="xs:string" />
+      <xs:element name="UC" type="xs:int" />
+      <xs:element name="UEContratos" type="xs:int" />
+      <xs:element name="UN" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsUnidadCompradora" nillable="true" type="tns:clsUnidadCompradora" />
+</xs:schema>

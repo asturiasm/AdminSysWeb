@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Metadata_POCO" elementFormDefault="qualified" targetNamespace="Metadata_POCO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="clsToolBar">
+    <xs:sequence>
+      <xs:element name="Botones" nillable="true" type="tns:ArrayOfclsBoton" />
+      <xs:element name="Objeto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsToolBar" nillable="true" type="tns:clsToolBar" />
+  <xs:complexType name="ArrayOfclsBoton">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsBoton" nillable="true" type="tns:clsBoton" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsBoton" nillable="true" type="tns:ArrayOfclsBoton" />
+  <xs:complexType name="clsBoton">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:clsObjeto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsBoton" nillable="true" type="tns:clsBoton" />
+  <xs:complexType name="clsObjeto">
+    <xs:sequence>
+      <xs:element name="Etiqueta" nillable="true" type="xs:string" />
+      <xs:element name="ImagenBotonArriba" nillable="true" type="xs:string" />
+      <xs:element name="ImagenBotonSobre" nillable="true" type="xs:string" />
+      <xs:element name="Nivel" type="xs:int" />
+      <xs:element name="NombreFisico" nillable="true" type="xs:string" />
+      <xs:element name="NombreLogico" nillable="true" type="xs:string" />
+      <xs:element name="Objeto" nillable="true" type="xs:string" />
+      <xs:element name="ObjetoPadre" nillable="true" type="xs:string" />
+      <xs:element name="OrdenTabulacion" type="xs:int" />
+      <xs:element name="TipoObjeto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsObjeto" nillable="true" type="tns:clsObjeto" />
+  <xs:complexType name="ArrayOfclsObjeto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsObjeto" nillable="true" type="tns:clsObjeto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsObjeto" nillable="true" type="tns:ArrayOfclsObjeto" />
+  <xs:complexType name="ArrayOfclsNoticia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsNoticia" nillable="true" type="tns:clsNoticia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsNoticia" nillable="true" type="tns:ArrayOfclsNoticia" />
+  <xs:complexType name="clsNoticia">
+    <xs:sequence>
+      <xs:element name="Asunto" nillable="true" type="xs:string" />
+      <xs:element name="De" nillable="true" type="xs:string" />
+      <xs:element name="Noticia" nillable="true" type="xs:string" />
+      <xs:element name="Para" nillable="true" type="xs:string" />
+      <xs:element name="Publicacion" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsNoticia" nillable="true" type="tns:clsNoticia" />
+</xs:schema>

@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SIGES.WCF" />
+  <xs:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd5" namespace="Metadata_POCO" />
+  <xs:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd6" namespace="POCO" />
+  <xs:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SIGES.Clasificadores.AD.POCO" />
+  <xs:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd8" namespace="Clasificadores_POCO" />
+  <xs:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd9" namespace="Tickets_POCO" />
+  <xs:element name="getTipoDatabase">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTipoDatabaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getTipoDatabaseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadParametros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parametros" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadParametrosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadParametrosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyPage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pagina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Query" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Comportamiento" type="xs:unsignedByte" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SIGES.WCF" minOccurs="0" name="Parametros" nillable="true" type="q1:ArrayOfParametro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyPageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabyPageResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyPageRank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pagina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Query" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Comportamiento" type="xs:unsignedByte" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SIGES.WCF" minOccurs="0" name="Parametros" nillable="true" type="q2:ArrayOfParametro" />
+        <xs:element minOccurs="0" name="NoPagina" type="xs:int" />
+        <xs:element minOccurs="0" name="pNoFilas" type="xs:decimal" />
+        <xs:element minOccurs="0" name="pFiltro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TamanoPagina" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyPageRankResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabyPageRankResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyPagebyUC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pagina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Query" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Comportamiento" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="Ejercicio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Entidad" type="xs:decimal" />
+        <xs:element minOccurs="0" name="UE" type="xs:decimal" />
+        <xs:element minOccurs="0" name="UC" type="xs:decimal" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SIGES.WCF" minOccurs="0" name="Parametros" nillable="true" type="q3:ArrayOfParametro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyPagebyUCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabyPagebyUCResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabySQL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sqlstmt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="getFromDictionary" type="xs:boolean" />
+        <xs:element minOccurs="0" name="parametros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="table" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabySQLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabySQLResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabySQLbyPool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sqlstmt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PoolName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parametros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="table" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabySQLbyPoolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabySQLbyPoolResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadListaReportes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_objeto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadListaReportesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadListaReportesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabySQLID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="getFromDictionary" type="xs:boolean" />
+        <xs:element minOccurs="0" name="parametros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrigenSelect" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabySQLIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabySQLIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyIDReporte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bSintaxsisCR" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyIDReporteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabyIDReporteResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parametros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="condTipoAcceso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrigenSelect" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabyIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyIDRank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parametros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="condTipoAcceso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrigenSelect" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="NoPagina" type="xs:int" />
+        <xs:element minOccurs="0" name="pQuerySQL" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNoFilas" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatabyIDRankResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDatabyIDRankResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPredicadoGranularidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pivot_table" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPredicadoGranularidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getPredicadoGranularidadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUnidadesCompradoras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pivot_table" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sqlstmt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="getFromDictionary" type="xs:boolean" />
+        <xs:element minOccurs="0" name="parametros" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUnidadesCompradorasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getUnidadesCompradorasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPredicadoGranularidadAdFunciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pivot_table" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoFuncion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPredicadoGranularidadAdFuncionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getPredicadoGranularidadAdFuncionesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="puedeCambiarClave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="puedeCambiarClaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="puedeCambiarClaveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="expiraTiempoClave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cantidadDias" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="expiraTiempoClaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="expiraTiempoClaveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogIN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogINResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogINResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidaUsuarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DatosUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DatosUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DatosUsuarioResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FuncionesUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FuncionesUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FuncionesUsuarioResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambioClave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambioClaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambioClaveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogOff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogOffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogOffResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarSesionUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fechahora" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarSesionUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarSesionUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarDML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarDMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EjecutarDMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarDMLMetadatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarDMLMetadatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EjecutarDMLMetadatosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="esAccesible">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="condTipoAcceso" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="esAccesibleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esAccesibleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkOnExpand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="condTipoAcceso" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkOnExpandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LinkOnExpandResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLOV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDLOV" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="params" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="use_diccionario" type="xs:boolean" />
+        <xs:element minOccurs="0" name="OrigenSelect" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLOVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getLOVResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TienePermiso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Permiso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="condTipoAcceso" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TienePermisoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TienePermisoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarTarea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="data" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="assemblyname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inst" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="metodo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isfunction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="datatype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tabla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usar_diccionario" type="xs:boolean" />
+        <xs:element minOccurs="0" name="interactivo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarTareaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EjecutarTareaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTareas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTareasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerTareasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LimpiarTareas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LimpiarTareasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LimpiarTareasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitaEjecucionSNIP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EjercicioEjecucion" type="xs:int" />
+        <xs:element minOccurs="0" name="SNIP" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FaseEjecucion" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="TipoEjecucion" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="datos" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitaEjecucionSNIPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitaEjecucionSNIPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DynamicTransactionPool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="data" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="assemblyname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inst" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="metodo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isfunction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="datatype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tabla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usar_diccionario" type="xs:boolean" />
+        <xs:element minOccurs="0" name="interactivo" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Conexion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DynamicTransactionPoolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DynamicTransactionPoolResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DynamicTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="data" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="assemblyname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inst" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="metodo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isfunction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="datatype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tabla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usar_diccionario" type="xs:boolean" />
+        <xs:element minOccurs="0" name="interactivo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DynamicTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DynamicTransactionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="execStoredProcedure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSQL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="execStoredProcedureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="execStoredProcedureResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bloqueoSemaforo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bloqueoSemaforoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bloqueoSemaforoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExcepciones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExcepcionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExcepcionesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ejercicios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjerciciosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EjerciciosResult" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="esSecretaria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Entidad" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="esSecretariaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esSecretariaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargarToolbar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargarToolbarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="Metadata_POCO" minOccurs="0" name="CargarToolbarResult" nillable="true" type="q5:clsToolBar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Boletin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Operacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Llaves" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BoletinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BoletinResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistorialGestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Gestion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="ItemInicial" type="xs:int" />
+        <xs:element minOccurs="0" name="Lote" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistorialGestionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="POCO" minOccurs="0" name="HistorialGestionResult" nillable="true" type="q6:clsSeguimientoAnotacionRank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadTabGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_objeto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="condTipoAcceso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tabroot" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadTabGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loadTabGroupResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TabGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TabGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="Metadata_POCO" minOccurs="0" name="TabGroupResult" nillable="true" type="q7:ArrayOfclsObjeto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjetoInicial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjetoInicialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObjetoInicialResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MenuUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ObjetoInicial" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MenuUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="Metadata_POCO" minOccurs="0" name="MenuUsuarioResult" nillable="true" type="q8:ArrayOfclsObjeto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Entidades">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ejercicio" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemInicial" type="xs:int" />
+        <xs:element minOccurs="0" name="Lote" type="xs:int" />
+        <xs:element minOccurs="0" name="Filtro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EntidadesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SIGES.Clasificadores.AD.POCO" minOccurs="0" name="EntidadesResult" nillable="true" type="q9:clsEntidadRank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnidadesCompradoras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="Clasificadores_POCO" minOccurs="0" name="ObjetoInicial" type="q10:ModuloSIGES" />
+        <xs:element minOccurs="0" name="Ejercicio" type="xs:int" />
+        <xs:element minOccurs="0" name="Entidad" type="xs:int" />
+        <xs:element minOccurs="0" name="UE" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemInicial" type="xs:int" />
+        <xs:element minOccurs="0" name="Lote" type="xs:int" />
+        <xs:element minOccurs="0" name="Filtro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnidadesCompradorasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SIGES.Clasificadores.AD.POCO" minOccurs="0" name="UnidadesCompradorasResult" nillable="true" type="q11:clsUnidadCompradoraRank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentrosCosto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ejercicio" type="xs:int" />
+        <xs:element minOccurs="0" name="Entidad" type="xs:int" />
+        <xs:element minOccurs="0" name="UE" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentrosCostoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="Clasificadores_POCO" minOccurs="0" name="CentrosCostoResult" nillable="true" type="q12:ArrayOfclsUnidadCompradora" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NoticiasVigentes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NoticiasVigentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="Metadata_POCO" minOccurs="0" name="NoticiasVigentesResult" nillable="true" type="q13:ArrayOfclsNoticia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsGenerados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsGeneradosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="Tickets_POCO" minOccurs="0" name="TicketsGeneradosResult" nillable="true" type="q14:ArrayOfclsTicketInsumo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsAsignados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsAsignadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="Tickets_POCO" minOccurs="0" name="TicketsAsignadosResult" nillable="true" type="q15:ArrayOfclsTicketInsumo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsRechazados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsRechazadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="Tickets_POCO" minOccurs="0" name="TicketsRechazadosResult" nillable="true" type="q16:ArrayOfclsTicketInsumo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsFinalizados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsFinalizadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="Tickets_POCO" minOccurs="0" name="TicketsFinalizadosResult" nillable="true" type="q17:ArrayOfclsTicketInsumo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsReporte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TicketsReporteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="Tickets_POCO" minOccurs="0" name="TicketsReporteResult" nillable="true" type="q18:ArrayOfclsTicketReporte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

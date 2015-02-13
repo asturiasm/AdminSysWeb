@@ -1,0 +1,1993 @@
+html {
+    overflow: auto;
+}
+body
+{
+  
+  font-family:Arial,Verdana,Tahoma,Geneva, sans-serif;
+  margin:0px;
+  overflow:hidden;
+  width:100%;
+}
+img
+{
+	border:none;
+}
+.bodyMain
+{
+	width:100%;
+	margin-top:0px;
+}
+hr
+{
+	border:1px solid;
+}
+form
+{
+	padding:0px;
+	margin:0px;
+}
+table
+{
+}
+td
+{
+	border-spacing: 0px;
+	border: none;
+}
+
+.header2
+{
+	/*background-color:RGB(224,233,246);*/
+	background-image :url('../img/background_banner.jpg');
+}
+
+.login_info, .login_info2,.ColDatos,.ColBotonera,.Botonera
+{
+	/*background-color:rgb(179,215,249);*/
+	background-color:#ddeffb;
+	color:White;
+}
+/*celeste oscuro*/
+.ColTitulo,.ColSubTitulo
+{
+	background-color:#4e7b9a;
+}
+hr
+{
+	border-color:#4e7b9a;
+}
+
+/*azul*/
+.login_usuario,.bodyMain,.titulopagina,.SiafTitulo,.Pagineo,.Encabezado,
+.DataGridMant .Encabezado,.DataGridMant .Pagineo
+,.ColTituloNuevo,.Grid
+{
+	background-color:rgb(18,47,105);
+	color:White;
+}
+.AvisoImportanteLogin
+{
+	color:rgb(18,47,105);
+	background-color:White;
+    font-size:large;
+}
+.TableInfoLogin
+{
+	padding:40px;
+	padding:40px;
+}
+.TableInfoLogin td
+{
+	border-spacing:40px;
+	padding:40px;
+}
+.LinkBlanco
+{
+	color:White;
+}
+.FormTable
+{
+	border-color:rgb(18,47,105);
+}
+/*blanco*/
+.blanco,.leftPanel,.FormTable
+{
+	background-color:white;
+	color:gray;
+}
+.login
+{
+	background-image:url("../img/background_login.jpg");
+	background-repeat:no-repeat;
+}
+.header{
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  height:63px;
+  display:block;
+  font-size:9pt;
+  overflow:hidden;
+  
+}
+.header a
+{
+	color:rgb(255,255,240);
+	font-size:9pt;	
+}
+.header img
+{
+	height:75px;
+	width:auto;
+}
+.header_logo{
+	float:left;
+	width:75px;
+	height:100%;
+}
+.header label,.header div{
+	display:inline;
+}
+.header_logo img{
+	margin:2px;
+	width:auto;
+	height:50px;
+}
+.header_title, .header_properties{
+	height:100%;
+	display:block;
+}
+.header_title{
+	width:25%;	
+	float:left;
+	
+}
+.header_title2{
+	width:15%;	
+	float:left;
+	
+	
+}
+.header h1,.header h2,.header h3{
+	font-size:12pt;
+	margin:0px;
+}
+.header_title h3{
+	font-size:9pt;
+}
+.header_properties{
+	width:50%;	
+	float:right;
+	font-size:8pt;
+	
+}
+.header_properties div
+{
+		
+	display:block;
+	width:100%;
+	text-align:left;
+}
+.header_properties div div{
+	display:inline;
+}
+.header SELECT
+{
+	font-family: verdana;
+	font-size: 9px;
+	border:1px solid white;
+	
+}  
+.header OPTION{
+	color:Blue;
+}
+.header_properties div{
+	
+}
+.header div a
+{
+	font-family: verdana;
+	font-size: 9px;
+	color:white;
+	text-decoration:underline;
+}
+.header2
+{
+	height:22px;
+}
+
+/*escritorio*/
+.escritorio
+{
+	background-color:white;
+	color:Black;
+	height:85%;
+}
+.leftPanel
+{
+	height:100%;
+	width:20%;
+	float:left;
+	background-color:rgb(249,249,249);
+	font-size:10px;
+}
+.RightPanel
+{
+	height:100%;
+	width:80%;
+	float:left;
+	background-color:red;
+	
+	
+}
+.divider
+{
+	width:6px;
+	background-color:rgb(200,200,200);
+	border-left:1px solid rgb(149,149,149);
+	border-right:1px solid rgb(149,149,149);
+	height:100%;
+	float:right;
+}
+.myBody
+{
+	background-color:white;
+	width:100%;
+	height:100%;
+	float:right;
+}
+.myBody iframe{
+	width:100%;
+	height:100%;
+}
+.ModalInfoIframe
+{
+	height:100%;
+	display:block;
+	overflow:hidden;	
+}
+
+/*Modal Popup AjaxControlToolkit*/ 
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+.modalPopup
+{
+	background-color: #ffffdd;
+	border-width: 3px;
+	border-style: solid;
+	border-color: Gray;	
+	width: 300px;
+	height: 200px;
+}
+
+.ModalInfoIframe iframe{
+	width:100%;
+	overflow:visible;
+}
+
+.footer{
+  background: #394e69 !important;
+  height:100px !important;
+  line-height: 22px !important;
+  border: none !important;
+  margin: 0px !important;
+  padding-top: 3px !important;
+}
+/*icons*/
+.icons{
+	background-color:white;
+	margin:2px;
+	padding:10px;
+	height:100%;
+}
+.thumbnail{
+	width:70px;
+	height:120px;
+	float:left;
+	display:block;
+	text-align:center;
+	margin:5px;
+	
+	vertical-align:top;
+	
+}
+.thumbnail img{
+	
+}
+.thumbnail a
+{
+	font-family:Verdana;
+	font-size:9px;
+	color: #0f3a82;
+}
+.thumbnail img{
+	width:70px;
+	height:auto;
+}
+
+
+/*login*/
+.login{
+	background-color:white;
+	border: 1px solid rgb(150,150,150);
+	margin:2px;
+	padding:10px;
+	height:100%;
+}
+.login h1{
+	font-size:12pt;
+	font-weight:bold;
+	font-family:Verdana;
+}
+.login h2{
+	font-size:11pt;
+	font-family:Verdana;
+}
+
+.login div{
+
+}
+.login table{
+
+}
+.login_info{
+  color: rgb(85,85,90)
+}
+.login_info2
+{
+
+}
+.login_info2{
+	border: 1px solid rgb(150,150,150);
+    margin: 10px 10px 10px 10px;
+	 color: rgb(100,100,100);
+/*	 background-color:rgb(232,234,237);*/
+	 padding:5px;
+}
+.login_usuario{
+	width:400px;
+	color:white;
+	float:right;
+	padding:2px;
+	outline:double  rgb(0,62,138);
+	border-collapse:collapse;
+}
+.login_usuario td{
+	
+	border-spacing:0px;
+	display:block;
+}
+.login_usuario td div{
+margin:0px;
+}
+.login_usuario input[type=text],.login_usuario input[type=password]{
+	width:70%;
+	margin:0px;
+	
+}
+/*Selector*/
+.MySelectorTable
+{
+	
+	
+}
+.SiafCustomSelector
+{
+	color:rgb(100,100,120);
+}
+.SiafCustomSelector table
+{
+	width:100%;
+	border-collapse:collapse;
+	background-color:White;
+}
+.SiafCustomSelector tr
+{
+	border-bottom:1px solid gray;
+}
+.SiafCustomSelector td
+{
+	padding:0px;
+	border-spacing:0px;
+}
+.SiafCustomSelector .SelectorItem
+{
+	border-bottom:1px solid gray;
+	width:100%;
+}
+.SiafCustomSelector .SelectorHeader
+{
+	background-color:rgb(0,62,138);
+	color:White;
+}
+.SelectorHeader tr
+{
+	height:40px;
+}
+.SiafCustomSelector label
+{
+	
+}
+.SiafCustomSelectorOptions
+{
+	max-height:400px;
+	min-height:100px;
+	overflow:auto;
+}
+.SiafCustomSelectorOptions div
+{
+	padding-top:2px;
+	padding-left:5px;
+}
+.SiafCustomSelectorOptions .textoEncontrado
+{
+	color:blue;
+	background-color:yellow;
+}
+.TextoEncontrado
+{
+	color:blue;
+	background-color:yellow;
+}
+/*SiafLogger*/
+.SiafLogger
+{
+	width:100%;
+	overflow:auto;
+	color:gray;
+	background-color:White;
+	
+}
+.SiafLogger table
+{
+	max-height:300px;
+	overflow:auto;
+}
+.SiafLogger td
+{
+	border: 1px solid gray;
+	padding:1px;
+}
+/*replace styles.css*/
+.FondoPantalla
+{
+	color:black;
+	background-image:none;
+	background-color:red;
+	overflow:visible;
+	
+}
+.FondoPantalla th
+{
+	color:white;
+	
+}
+.FondoPantalla td
+{
+	
+}
+.titulopagina
+{
+	color:white;
+	font-weight:bold;
+	font-size:8pt;
+	display:inline;
+	margin-left:0px;
+	margin-top:0px;
+}
+.SiafTitulo
+{
+	color:black;
+	font-weight:bold;
+	display:block;
+	height:15px;
+	background-color:rgb(18,47,105);
+    margin-top:3px;
+	margin-bottom:3px;
+    margin-left:5px;
+    margin-right:5px;
+
+}
+.SiafTitulo .col1
+{
+	width:12px;
+	float:left;
+	
+}
+.SiafTitulo .col2
+{
+	float:left;
+	display:block;
+}
+.SiafTitulo .col3
+{
+	width:12px;
+	float:right;
+}
+.Grid
+{
+	color:White;	
+}
+/*frm mantenimiento*/
+.FondoPantalla
+{
+	background-color:White;
+}
+.FondoPantalla table
+{
+	width:100%;
+}
+.FondoPantalla td
+{
+	
+}
+.FondoPantalla tr
+{
+	
+}
+/*borrar esto*/
+.toolbar
+{
+/*	background-color:rgb(102,148,227);*/
+	/*background-image:url("../img/bgtoolbar.png");*/
+	background-repeat:repeat-x;
+	height:40px;
+	vertical-align:middle;
+	text-align:right;
+}
+.MantenimientoToolbar
+{
+	background-color:white;
+}
+.toolbar table
+{
+	overflow:visible;
+	border:none;
+}
+/*tabla celeste con efecto de redondeo*/
+.tableAzulClaro
+{
+	background-color:RGB(224,233,246);
+	margin:0px;
+	border-left: 1px solid rgb(169,192,228);
+	border-right: 1px solid rgb(169,192,228);
+	width:100%;
+}
+.tableAzulClaro td
+{
+	padding:4px;
+}
+.tableAmarillo
+{
+	background-color:rgb(254,253,205);
+	margin:0px;
+	border-left: 1px solid rgb(124,124,124);
+	border-right: 1px solid rgb(124,124,124);
+}
+.tableAmarillo td
+{
+	padding:4px;
+}
+.table_header_effect
+{
+	height:8px;
+	background-image:url("img/bgtable.png");
+	margin-top:6px;
+	margin-bottom:0px;
+}
+.table_header_effectd
+{
+	height:8px;
+	background-image:url("img/bgtable180.png");
+	margin-top:0px;
+	margin-bottom:6px;
+}
+.table_header_effect .col1
+{
+	background-color:blue;
+	background-image:url("img/rcstrip_blue_05.png");
+	background-repeat:no-repeat;
+	width:8px;
+	height:8px;
+	background-position:-20px 0px;
+	float:left;
+}
+.table_header_effect .col2
+{
+	background-image:url("img/bgtable.png");
+	background-color:white;
+	width:auto;
+}
+.table_header_effect .col3
+{
+	background-color:yellow;
+	background-image:url("img/rcstrip_blue_05.png");
+	background-repeat:no-repeat;
+	width:8px;
+	height:8px;
+	background-position:-28px 0px;
+	float:right;
+}
+.table_header_effectd .col1
+{
+	background-color:blue;
+	background-image:url("img/rcstrip_blue_05.png");
+	background-repeat:no-repeat;
+	width:8px;
+	height:8px;
+	background-position:-20px -8px;
+	float:left;
+}
+.table_header_effectd .col3
+{
+	background-color:yellow;
+	background-image:url("img/rcstrip_blue_05.png");
+	background-repeat:no-repeat;
+	width:8px;
+	height:8px;
+	background-position:-28px -8px;
+	float:right;
+}
+/*redondear tìpo azul*/
+.table_header_effect_blue
+{
+	height:5px;
+	/*background-color:rgb(58,106,179);*/
+	background-color:rgb(18,47,115);
+	display:block;
+	margin-top: 5px;
+    width: 99%;
+}
+.table_header_effect_blue .col1
+{
+	background-color:white;
+	background-image:url("img/circleazul10.png");
+	background-repeat:no-repeat;
+	width:5px;
+	height:5px;
+	background-position:1px 0px;
+	float:left;
+}
+.table_header_effect_blue .col2
+{
+	background-color:yellow;
+	width:auto;
+	height:5px;
+}
+.table_header_effect_blue .col3
+{
+	background-color:white;
+	background-image:url("img/circleazul10.png");
+	background-repeat:no-repeat;
+	width:5px;
+	height:5px;
+	background-position:-6px 0px;
+	float:right;
+}
+.table_header_effect_yellow
+{
+	height:10px;
+	background-color:rgb(254,253,205);
+	display:block;
+	margin-top: 5px;
+	
+}
+.table_header_effect_yellow .col1
+{
+	background-color:yellow;
+	background-color:blue;
+	background-image:url("img/bgcircleyellow.PNG");
+	background-repeat:no-repeat;
+	width:9px;
+	height:9px;
+	background-position:-0px 0px;
+	float:left;
+}
+.table_header_effect_yellow .col2
+{
+	border-top:1px solid rgb(128,128,128);
+	width:auto;
+	height:9px;
+}
+.table_header_effect_yellow .col3
+{
+	background-color:yellow;
+	background-image:url("img/bgcircleyellow.PNG");
+	background-repeat:no-repeat;
+	width:9px;
+	height:9px;
+	background-position:-10px 0px;
+	float:right;
+}
+/*la parte de abajo*/
+.table_header_effect_yellowd
+{
+	height:9px;
+	background-color:rgb(254,253,205);
+	display:block;
+	border:none;
+}
+.table_header_effect_yellowd .col1
+{
+	background-color:yellow;
+	background-color:blue;
+	background-image:url("img/bgcircleyellow.PNG");
+	background-repeat:no-repeat;
+	width:9px;
+	height:9px;
+	background-position:-0px -10px;
+	float:left;
+}
+.table_header_effect_yellowd .col2
+{
+	border-bottom:1px solid rgb(128,128,128);
+	width:100%;
+	height:9px;
+}
+.table_header_effect_yellowd .col3
+{
+	background-color:yellow;
+	background-image:url("img/bgcircleyellow.PNG");
+	background-repeat:no-repeat;
+	width:9px;
+	height:9px;
+	background-position:-10px -10px;
+	float:right;
+}
+.PagineoFooter
+{
+	border:1px solid red;
+	height:14px;
+	width:99%;
+	display:block;
+	border:none;
+	background-color:rgb(18,47,105);
+	color:Red;
+	float:left;
+	margin-bottom:10px;
+	
+}
+.PagineoFooter .col1
+{
+	height:15px;
+	width:50px;
+	float:left;
+	background-image:url("img/bgpaginear.png");
+	background-position:0px 0px;
+	float:left;
+}
+.PagineoFooter .col2
+{
+	height:15px;
+	float:left;
+	background-color:yellow;
+}
+.PagineoFooter .col3
+{
+	height:15px;
+	width:50px;
+	float:right;
+	background-image:url("img/bgpaginear.png");
+	background-position:-50px -0px;
+}
+
+.TableContainer
+{
+	border-collapse:collapse;
+	width:100%;
+}
+.TableContainer td
+{
+	border-spacing:0px;
+	padding:0px;
+}
+/*table de mantenimiento - datagrid*/
+
+
+
+.Encabezado
+{
+	text-align:center;
+	color:white;
+}
+.DataGridMant .Encabezado
+{
+	
+}
+.DataGridMant .Encabezado
+{
+
+}
+.Encabezado td
+{
+	
+}
+.Encabezado td,.Encabezado th
+{
+	
+}
+
+.DataGridMant .Encabezado td
+{
+	color:White;
+}
+
+
+.Pagineo a
+{
+	color: white;	
+}
+.Pagineo td a
+{
+	color: white;	
+}
+.Pagineo span
+{
+	color: white;	
+}
+.ColumnaNumerica
+{
+	text-align:right;
+}
+.ColumnaCentrada
+{
+	text-align:center;
+}
+.DataGridMant{
+	border-collapse:collapse;
+	width:100%;
+	text-align:left;
+	margin: 0px;
+	background: white;
+}
+.DataGridMant table
+{
+	/**/
+	border:none;
+	
+}
+.DataGridMant td
+{
+	border-spacing: 0px;
+	color: rgb(88,88,88);
+	border-right: 1px solid white;
+	font-size: 8pt;
+}
+.DataGridMant th
+{
+	border-right: 1px solid white;
+}
+.DetallePrincipal
+{
+}
+.DetalleAlterno
+{
+	background-color:rgb(179,215,249);
+	background-color:rgb(224,233,246);
+}
+.DetallePrincipal td
+{
+	border-bottom: 1px solid rgb(214,214,214);
+	border-top: 1px solid rgb(214,214,214);
+	
+}
+.DetalleAlterno td
+{
+	/*background-color:RGB(234,243,255);
+	background-color:RGB(239,239,239);*/
+	border-bottom: 1px solid rgb(214,214,214);
+	border-top: 1px solid rgb(214,214,214);
+	
+}
+.Encabezado
+{
+	color:white;
+	border-left: 1px solid rgb(169,192,228);
+	border-right: 1px solid rgb(169,192,228);
+	
+}
+.Encabezado td
+{
+	border-bottom: 1px solid rgb(169,192,228);
+}
+.Pagineo
+{
+	
+}
+.Pagineo td
+{
+	text-align:center;
+	height:15px;
+	color: white;
+}
+.Pagineo td span
+{
+	
+}
+
+.panelFiltroGroup
+{
+	background-color:white;
+	float:left;
+	width:100%;
+	margin-top:5px;
+}
+.panelFiltroGroup  table
+{
+	border-bottom: 1px solid rgb(169,192,228);	
+}
+.panelFiltroGroup  tr
+{
+	border-left: 1px solid rgb(169,192,228);	
+	border-right: 1px solid rgb(169,192,228);	
+}
+.panelFiltroGroup .Encabezado td
+{
+	border:none;
+}
+.panelFiltroGroup img
+{
+	border: 1px solid rgb(169,192,228);
+}
+.panelFiltro
+{
+	border:none;
+}
+.panelFiltro td
+{
+	background-color:RGB(224,233,246);
+}
+.SiafForm
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+}
+/*modal*/
+.modal_tapa_1
+{
+	filter:alpha(opacity=0);
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:998;
+	display:none;
+	opacity: 0;
+	-moz-opacity:0.5;
+}
+.modal_tapa_2
+{
+	filter:alpha(opacity=30);
+	position:absolute;top:0;
+	left:0;
+	z-index:999;
+	width:100px;
+	height:100px;
+	background-color:gray;
+	display:none;
+	opacity:.50;
+	-moz-opacity:0.5;
+}
+.ModalTitle{
+	height:20px;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	background-color:rgb(86,117,172);
+	background-image :url('../img/modal_title_bg.JPG');
+	background-repeat:repeat-y;
+	font-weight:bold;
+}
+.ModalIcon{
+	float:left;		
+	margin-left:40px;
+	border:1px solid white;
+}
+.ModalTitle .ModalTextTitle{
+	float:left;
+}
+.ModalTitle .ModalCloseIcon{
+	float:right;
+}
+.ModalBody
+{
+	
+}
+
+.modal_title_icon{
+	background-color:rgb(55,84,144);
+}
+.modal_title_close{
+	background-color:rgb(86,117,172);
+}
+.modal_title_bg{
+	background-repeat:repeat-y;
+}
+
+.ModalFramecito
+{
+	font-size: 12px;
+	font-family: Arial;
+	
+	color:#111144;
+	position:absolute;
+	min-width:100px;
+	height:auto;
+	
+	z-index:99999;
+	overflow:visible;
+	/*border:1px solid gray;*/
+	/*background-color: white;
+	background-color: rgb(222,218,210);*/
+	border-collapse:collapse;
+	border-spacing:0px;
+	padding:0px;
+}
+.ModalFramecito td
+{
+	border-spacing:0px;
+	padding:0px;
+}
+.ModalFramecito .ModalHeader
+{
+	color:White;
+	font-family:Verdana;
+	font-size:9pt;
+	overflow:hidden;
+}
+
+.ModalFramecito .ModalBody
+{
+	background-color: rgb(222,218,210);
+	border:1px solid gray;
+	border-bottom:none;
+}
+.ModalFramecito .ModalBody td
+{
+	vertical-align:top;
+}
+.ModalFramecito .ModalFooter
+{
+	background-color: rgb(222,218,210)
+}
+
+
+.ModalDetalles
+{
+	background-color:none;
+	overflow:visible;
+}
+.ModalDetalles table
+{
+	border-collapse:collapse;
+	width:400px;
+	font-size:10px;
+	font-weight:normal;
+}
+.ModalDetalles .DetallesHeader td
+{
+	background-color:blue;
+	color:white;
+}
+.ModalDetalles td
+{
+	border:1px solid gray;
+	border-top:none;
+}
+
+.ModalFramecito table
+{
+	border-collapse:collapse;
+}
+.ModalFramecito table td
+{
+	padding:0px;
+	border-spacing:0px;
+}
+.ModalFramecito img{
+	margin:2px;
+}
+.ModalFramecito input{
+
+}
+.modal_title_text{
+	text-align:center;
+}
+.modal_img_close{
+}
+.ModalBotonera{
+	text-align:center;
+	border:1px solid gray;
+}
+.ModalBotonera input{
+	margin:5px;
+}
+.MainModalIcon
+{
+	display:block;
+	width:100px;
+	height:100px;
+	float:left;
+}
+.MainModalIcon img
+{
+	margin:5px;
+	height:40px;
+	width:auto;
+}
+.MainModalInfo
+{
+	display:block;
+	width:400px;
+	height:100px;
+	float:left;
+}
+.MainModalTitle
+{
+	
+	width:100%;
+	float:left;
+}
+.MainModalDescription
+{
+	font-size:15pt;
+	font-weight:bold;
+	width:100%;
+	float:left;
+}
+.MainModalDetails
+{
+	font-size:12pt;
+	width:100%;
+	float:left;
+	overflow:visible;
+}
+.MainModalIcon
+{
+
+}
+.MainModalIcon img{
+	float:left;
+	height:40px;
+	width:auto;
+}
+.ModalInfo{
+	padding:5px;
+	
+}
+.ModalInfo .ModalInfoDetails{
+	margin-left:60px;
+	font-size:15px;
+	font-weight:bold;
+}
+.ModalInfo .ModalInfoDetails{
+
+}
+.modal_error_table
+{
+}
+.modal_error_table_clase
+{
+	background-color: #6098c8;
+	font-size : 8pt;
+	color:Black;
+	width:20%;
+}
+.modal_error_table_metodo
+{
+	background-color: #6098c8;
+	font-size : 8pt;
+	color:Black;
+	width:20%;
+}
+.modal_error_table_descripcion
+{
+	text-align:center;
+	background-color:#006699;
+	font-weight:bold;
+	color:White;
+	width:60%;
+	
+}
+/*filters*/
+.TableFilter
+{
+	background-color:red;
+	border-collapse:collapse;
+	border:1px solid rgb(161,185,225);
+	border-top:none;
+}
+.TableFilter td
+{
+	
+}
+.TableFilter input
+{
+	color:Navy;
+	font-size:8pt;
+	color:Olive;
+	font-family:Tahoma;
+	margin:2px;
+}
+.TableFilter select
+{
+	background-color:white;
+	color:black;
+	font-size:8pt;
+	margin:2px;
+	display:block;
+}
+.Botonera
+{
+	text-align:right ;
+	border:1px solid black;
+	margin-top:5px;
+	padding:2px;
+}
+.Botonera input 
+{
+	margin-left:5px;
+	display:inline-block;
+}
+.filtroLeft
+{
+	float:left;
+	width:60%;
+	padding:5px;
+}
+.filtroRight
+{
+	float:left;
+	width:35%;
+	padding:5px;
+}
+.FormTable
+{
+	border-collapse:collapse;
+	width:100%;
+	border:none;
+	border:1px solid;
+}
+.FormTable td
+{
+	border-spacing:0px;
+	padding:0px;
+	border:1px solid white;
+}
+.FormTable textarea
+{
+	display:block;
+	width:90%;
+}
+
+/*clase para la tabla de componente Geografico*/
+.Geografico
+{
+	border-collapse:collapse;
+	margin:0px;
+	border:none;
+	width:100%;
+}
+.Geografico td
+{
+	border-spacing:0px;
+	padding:0px;
+	border:1px solid white;
+}
+/*importar del viejo*/
+/*Clase para Columnas de titulos de las tablas que agrupan controles*/
+.ColTitulo
+{
+	text-align:center;
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:white;
+}
+/*Clase para Columnas de datos de las tablas que agrupan controles*/
+.ColDatos
+{
+	font-size:8pt;
+	font-family:Verdana;
+	color:Black;
+}
+.ColBotonera
+{
+	border-top:1px solid gray;
+	border-left:1px solid gray;
+	text-align:center;
+}
+.HrFin
+{
+	display: block; 
+	clear: left;
+	margin: 10px 0;
+	visibility: hidden;
+}
+.AsteriscoAmarillo
+{
+	color:	#ffcc00;
+	font-size:12pt;
+	font-weight:bold;
+}
+.ColTituloNuevo
+{
+	text-align:center;
+	font-size:10pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:white;
+}
+.ColSubTitulo
+{
+	text-align:center;
+}
+.ColDatosTotalizador
+{
+	background-color:#daeeff;
+	font-size:8pt;
+	font-family:Arial;
+	color:Black;
+	border-bottom: #122f73 thin solid;
+}
+/*WIZZARD*/
+.Wizard
+{
+	text-align: left;
+	background-color:#203B6A;
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: Verdana;
+	color: white;	
+	height: 20px;
+	line-height: 25px;
+	vertical-align:top;
+}
+.TituloWizard
+{
+	text-align: left;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+/*opciones de el wizard*/
+/*Cuando no est seleccionado*/
+.NoSelectedItemWizard
+{
+	text-align: left;
+	background-color:#203b6a;/*azulOscuro*/
+	vertical-align:top;
+	color:white;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+/*Cuando esta seleccionado*/
+.SelectedItemWizard
+{
+	text-align: left;
+	background-color:#ddeffb;/*celeste*/
+	vertical-align:top;
+	color:#203b6a;/*azulOscuro*/
+	font-family:Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+/*LOGOUT*/
+.LogOutInterno
+{
+	width: 317px;
+	position: absolute;
+	height: 17em;
+	background-color: #184a91;
+	top: 25%;
+	margin-left:35%;
+	
+}
+.LogOutInterno a
+{
+	color:White;
+}
+
+.ElementoOculto
+{
+	display: none;
+	width: 0;
+	height: 0;
+}
+.ContextMenu
+{
+	position:absolute;
+	width:250px;
+	height:auto;
+	overflow:visible;
+	background-color:White;
+	font-size:8pt;
+	border:1px solid rgb(77,77,77);
+	display:none;
+}
+.ContextMenuItem Div
+{
+	float:left;
+	width:250px;
+	border-bottom:1px solid black;
+	height:22px;
+}
+.ContextMenuItemSelected
+{
+	background-color:Blue;
+	color:White;
+}
+/*ESTILO IMPORTADO DE CALENDARIO*/
+/* The main calendar widget.  DIV containing a table. */
+
+div.calendar { position: relative; }
+
+.calendar, .calendar table {
+  border: 1px solid #556;
+  font-size: 11px;
+  color: #000;
+  cursor: default;
+  background: #eef;
+  font-family: tahoma,verdana,sans-serif;
+}
+
+/* Header part -- contains navigation buttons and day names. */
+
+.calendar .button { /* "<<", "<", ">", ">>" buttons have this class */
+  text-align: center;    /* They are the navigation buttons */
+  padding: 2px;          /* Make the buttons seem like they're pressing */
+}
+
+.calendar .nav {
+  background: #778 url(menuarrow.gif) no-repeat 100% 100%;
+}
+
+.calendar thead .title { /* This holds the current "month, year" */
+  font-weight: bold;      /* Pressing it will take you to the current date */
+  text-align: center;
+  background: #fff;
+  color: #000;
+  padding: 2px;
+}
+
+.calendar thead .headrow { /* Row <TR> containing navigation buttons */
+  background: #778;
+  color: #fff;
+}
+
+.calendar thead .daynames { /* Row <TR> containing the day names */
+  background: #bdf;
+}
+
+.calendar thead .name { /* Cells <TD> containing the day names */
+  border-bottom: 1px solid #556;
+  padding: 2px;
+  text-align: center;
+  color: #000;
+}
+
+.calendar thead .weekend { /* How a weekend day name shows in header */
+  color: #a66;
+}
+
+.calendar thead .hilite { /* How do the buttons in header appear when hover */
+  background-color: #aaf;
+  color: #000;
+  border: 1px solid #04f;
+  padding: 1px;
+}
+
+.calendar thead .active { /* Active (pressed) buttons in header */
+  background-color: #77c;
+  padding: 2px 0px 0px 2px;
+}
+
+/* The body part -- contains all the days in month. */
+
+.calendar tbody .day { /* Cells <TD> containing month days dates */
+  width: 2em;
+  color: #456;
+  text-align: right;
+  padding: 2px 4px 2px 2px;
+}
+.calendar tbody .day.othermonth {
+  font-size: 80%;
+  color: #bbb;
+}
+.calendar tbody .day.othermonth.oweekend {
+  color: #fbb;
+}
+
+.calendar table .wn {
+  padding: 2px 3px 2px 2px;
+  border-right: 1px solid #000;
+  background: #bdf;
+}
+
+.calendar tbody .rowhilite td {
+  background: #def;
+}
+
+.calendar tbody .rowhilite td.wn {
+  background: #eef;
+}
+
+.calendar tbody td.hilite { /* Hovered cells <TD> */
+  background: #def;
+  padding: 1px 3px 1px 1px;
+  border: 1px solid #bbb;
+}
+
+.calendar tbody td.active { /* Active (pressed) cells <TD> */
+  background: #cde;
+  padding: 2px 2px 0px 2px;
+}
+
+.calendar tbody td.selected { /* Cell showing today date */
+  font-weight: bold;
+  border: 1px solid #000;
+  padding: 1px 3px 1px 1px;
+  background: #fff;
+  color: #000;
+}
+
+.calendar tbody td.weekend { /* Cells showing weekend days */
+  color: #a66;
+}
+
+.calendar tbody td.today { /* Cell showing selected date */
+  font-weight: bold;
+  color: #00f;
+}
+
+.calendar tbody .disabled { color: #999; }
+
+.calendar tbody .emptycell { /* Empty cells (the best is to hide them) */
+  visibility: hidden;
+}
+
+.calendar tbody .emptyrow { /* Empty row (some months need less than 6 rows) */
+  display: none;
+}
+
+/* The footer part -- status bar and "Close" button */
+
+.calendar tfoot .footrow { /* The <TR> in footer (only one right now) */
+  text-align: center;
+  background: #556;
+  color: #fff;
+}
+
+.calendar tfoot .ttip { /* Tooltip (status bar) cell <TD> */
+  background: #fff;
+  color: #445;
+  border-top: 1px solid #556;
+  padding: 1px;
+}
+
+.calendar tfoot .hilite { /* Hover style for buttons in footer */
+  background: #aaf;
+  border: 1px solid #04f;
+  color: #000;
+  padding: 1px;
+}
+
+.calendar tfoot .active { /* Active (pressed) style for buttons in footer */
+  background: #77c;
+  padding: 2px 0px 0px 2px;
+}
+
+/* Combo boxes (menus that display months/years for direct selection) */
+
+.calendar .combo {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 4em;
+  cursor: default;
+  border: 1px solid #655;
+  background: #def;
+  color: #000;
+  font-size: 90%;
+  z-index: 100;
+}
+
+.calendar .combo .label,
+.calendar .combo .label-IEfix {
+  text-align: center;
+  padding: 1px;
+}
+
+.calendar .combo .label-IEfix {
+  width: 4em;
+}
+
+.calendar .combo .hilite {
+  background: #acf;
+}
+
+.calendar .combo .active {
+  border-top: 1px solid #46a;
+  border-bottom: 1px solid #46a;
+  background: #eef;
+  font-weight: bold;
+}
+
+.calendar td.time {
+  border-top: 1px solid #000;
+  padding: 1px 0px;
+  text-align: center;
+  background-color: #f4f0e8;
+}
+
+.calendar td.time .hour,
+.calendar td.time .minute,
+.calendar td.time .ampm {
+  padding: 0px 3px 0px 4px;
+  border: 1px solid #889;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.calendar td.time .ampm {
+  text-align: center;
+}
+
+.calendar td.time .colon {
+  padding: 0px 2px 0px 3px;
+  font-weight: bold;
+}
+
+.calendar td.time span.hilite {
+  border-color: #000;
+  background-color: #667;
+  color: #fff;
+}
+
+.calendar td.time span.active {
+  border-color: #f00;
+  background-color: #000;
+  color: #0f0;
+}
+
+.etiqueta
+{
+	text-align:center;
+	background-color:#122f73;
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:white;
+}
+.WarningLabel
+{
+	color:Yellow;
+	
+}
+
+/**Styling information specific to individual content pages**/
+
+/* Accordion */
+.accordionHeader
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #2E4d7B;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#master_content .accordionHeader a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeader a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionHeaderSelected
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #5078B3;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#master_content .accordionHeaderSelected a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeaderSelected a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionContent
+{
+    background-color: #D3DEEF;
+    border: 1px dashed #2F4F4F;
+    border-top: none;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.heading {
+	padding: 1em 0 1em 0;
+	color:#5377A9;
+	font-family:Arial, Sans-Serif;
+	font-weight:bold;
+	font-size:1.2em;
+}
+.balloonstyle{
+position:absolute;
+top: -500px;
+left: 0;
+padding: 5px;
+visibility: hidden;
+border:1px solid black;
+font:normal 12px Verdana;
+line-height: 18px;
+z-index: 100;
+background-color: white;
+width: 200px;
+}
+
+#arrowhead{
+z-index: 99;
+position:absolute;
+top: -500px;
+left: 0;
+visibility: hidden;
+}
+
+.InfoImportante
+{
+	padding:5px;
+	font-size:11pt;
+	color:rgb(10,10,10);
+	font-family:Arial;
+	background-color:rgb(255,255,220);
+	border: 1px solid black;
+	font-weight:bold;	
+}
+
+.BodyReport
+{
+	overflow:scroll;
+}
+/*clase cualquiera*/
+.BodyInterno
+{
+
+}
+/*Iconos de Menu Inicial*/
+.IconsPanel
+{
+	background-image:none;
+	margin:20px;
+	float:left;
+	overflow:visible;
+}
+.Icons_header
+{
+	width:100%;
+	height:18px;
+}
+.Icons
+{
+	background-color:White;
+	width:100%;
+	height:auto;
+}
+.Icons_footer
+{
+	width:100%;
+	height:40px;
+	
+}
+.IconsLink
+{
+	color:White;
+	float:left;
+	margin-left:3px;
+	margin-top:10px;
+}
+.IconsLink a
+{
+	color:White;
+	font-size:7pt;
+}
+.Noticia
+{
+	font-size:9pt;
+	color:rgb(10,10,10);
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.TableDistr
+{
+	border-collapse:collapse;
+	border-spacing:0px;
+	padding:0px;    
+}
+.TableDistr td
+{
+	border-spacing:0px;
+	padding:0px;
+}
+
+/*Clase para Columnas de titulos de las tablas que agrupan controles*/
+.ColTituloCollapseOpen
+{
+	text-align:left;
+	background-color:#4e7b9a;
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:White;
+	height: 20px;
+}
+
+.ColTituloCollapseOpenActive
+{
+	text-align:left;
+	background-color:#4e7b9a;
+	font-size:10pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:White;
+	height: 20px;
+}
+
+.ColTituloCollapseClosed
+{
+	text-align:left;
+	background-color:#4e7b9a;
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:White;
+	height: 41px;
+}
+
+.ColTituloCollapseClosedActive
+{
+	text-align:left;
+	background-color:#4e7b9a;
+	font-size:10pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:White;
+	height: 41px;
+}
+
+/*nuevos estilos*/
+/*nuevos estilos*/
+.MainToolbar
+{
+	background-color: #4E7B9A;
+	overflow: visible;
+	width: 100%;
+	height: 20px;
+	padding-left: 10px;
+	padding-top: 3px;
+	
+}
+.MainToolbar div
+{
+	font-size:100%;
+	float:left;
+	color:white;
+	height: 20px;
+	padding-left: 2px;
+	padding-right: 2px;
+	
+}
+.MainToolbar div a
+{
+	color:white;
+}
+/*''msg = "<table><tr><TD style='text-align:center;background-color:#006699;font-size:8pt;font-weight:bold;font-family:Arial;color:White;'>Clase</TD><TD style='text-align:center;background-color:#006699;font-size:8pt;font-weight:bold;font-family:Arial;color:White;'>Metodo</TD><TD style='text-align:center;background-color:#006699;font-size:8pt;font-weight:bold;font-family:Arial;color:White;'>Mensaje</TD></TR>"*/
+.MensajeErrorHeader
+{
+	font-family:Arial;
+	font-size:8pt;
+}
+.MensajeErrorHeader th
+{
+	background-color:#006699;
+	font-weight:bold;
+	color:White;
+}
+/*msg = msg & "<TR><TD style='background-color:#6098c8;font-size:8pt;font-family:Arial;color:Black;'>" & cExcep.clase & "</TD><TD style='background-color:#6098c8;font-size:8pt;font-family:Arial;color:Black;'>" & cExcep.metodo & "</TD><TD style='text-align:center;background-color:#006699;font-size:8pt;font-weight:bold;font-family:Arial;color:White;'>" & cExcep.Message & "</TD></TR>"*/
+.MensajeErrorHeader td
+{
+	background-color:	#6098c8;
+	color:Black;
+}
+.BuscadorNotice
+{
+	background-color:rgb(250,252,230);
+	color:rgb(0,106,148);
+	font-weight:bold;
+	border:1px solid rgb(0,106,148);
+}
+.Tarea
+{
+	background-color:White;
+	border-bottom:1px solid black;
+	font-size:8pt;
+	color:rgb(50,50,50);
+}
+.Tarea
+{
+	border-bottom:1px solid rgb(235,235,235);
+	width:100%;
+}
+.Tarea a
+{
+	color:Blue;
+}
+.Tareas img
+{
+	height:12px;
+	width:auto;
+	
+}
+.main_menu_item a
+{
+    color:white;
+}
+
+#toolbar {
+	padding: 10px 4px;
+}
+.Excepciones
+{
+    border: 1px solid red;
+    background-color:rgb(200,200,200);
+}
+.Excepciones th
+{
+    background-color:Red;
+    color:white;
+}
+.Excepciones td
+{
+    background-color:white;
+}
+.Excepciones tr
+{
+    background-color:White;
+}
+.error-text
+{
+    color:Red;
+}
+
+.alinearDerecha {
+    text-align:right;
+}

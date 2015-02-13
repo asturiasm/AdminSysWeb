@@ -1,0 +1,41 @@
+﻿<%@ Master Language="VB" CodeFile="SIGESMasterPage.master.vb" Inherits="include_SIGESMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Sistema Siaf-Sag</title>
+    <link rel="stylesheet" type="text/css" href="../Styles.css"/>
+    <link type="text/css" href="../Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../Scripts/xml2json.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-1.10.3.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.layout.js"></script>
+    <script type="text/javascript" src="../include/global2.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" style="padding:0px;height:100%;">
+        <telerik:RadScriptManager ID="ScriptManager1" runat="server"></telerik:RadScriptManager>
+        <telerik:RadAjaxManager ID="RadAjaxManager" runat="server"></telerik:RadAjaxManager>
+        <telerik:RadAjaxLoadingPanel ID="ralp" runat="server" Skin="Default"></telerik:RadAjaxLoadingPanel>
+        <asp:HiddenField ID="INPUT_MENSAJE_ESPERA" runat="server" />
+        <asp:HiddenField ID="INPUT_CONSULTA" runat="server" />
+        <asp:HiddenField ID="INPUT_MODAL_TIPO" Value="0" runat="server" />
+        <asp:HiddenField ID="INPUT_MODAL_CONFIRMAR" Value="false" runat="server" />
+        <asp:HiddenField ID="INPUT_MODAL_CONFIRMACION_ID" runat="server" />
+        <asp:HiddenField ID="BUTTON_MODAL_CONFIRMAR" runat="server" />
+        <asp:HiddenField ID="MODAL_INPUT_MENSAJE" runat="server" />
+        <asp:HiddenField ID="MODAL_INPUT_MENSAJE_DETALLES" runat="server" />
+        <asp:HiddenField ID="INPUT_MODAL_PROGRESSBAR_KEY" runat="server" />
+        <asp:HiddenField ID="INPUT_MODAL_NIVEL" Value="0" runat="server" />
+        <asp:HiddenField ID="MODAL_GOTO_PAGE" runat="server" />
+        <div style="height:100%;overflow:hidden;">
+            <asp:ContentPlaceHolder id="ContenidoPagina" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

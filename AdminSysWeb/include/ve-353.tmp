@@ -1,0 +1,218 @@
+﻿// JScript File
+
+function leerMenu(pDiv,pMenu){
+    try{
+        var text = document.getElementById(pMenu).innerHTML; 
+	    var mm = new MainMenu();	
+	    mm.divId =  pDiv;
+	    mm.element = loadXMLString(text);
+	    mm.imprimir();
+    }
+    catch(ex){
+        alert(ex);
+        throw ex;
+    }
+	
+}
+var MENU = new Object();
+MENU.MENU = "menu";
+MENU.LABEL = "label";
+MENU.ITEM = "item";
+MENU.VALUE = "value";
+
+MainMenu.prototype.divId = ''
+MainMenu.prototype.element = null;
+MainMenu.prototype.items = null;
+MainMenu.prototype.itemSelected = null;
+
+{
+	if (window.ActiveXObject){
+		MENU.MENU = "MENU";
+		MENU.LABEL = "LABEL";
+		MENU.ITEM = "ITEM";
+		MENU.VALUE = "VALUE";
+	}
+}
+function MainMenu(me){
+	
+	this.imprimir = function(){
+		me = this;
+		var tabs = getChildNodes(this.element.getElementsByTagName(MENU.MENU)[0]);
+		this.items = new Array();
+		for (var i=0;i<tabs.length ;i++ )
+		{
+			var node = loadNode(tabs[i]);
+			var item = new MainMenuItem();
+			item.mainMenu = this;
+			this.items.push(item);
+			item.div = createDiv();
+			item.div.appendChild(createLabel(node[MENU.LABEL]));
+			item.div.className ='main_menu_item';
+			findElement(this.divId).appendChild(item.div);
+			item.title = node[MENU.LABEL];
+			item.parentPopup = me;
+			item.node = node;
+			item.tipo = 1;
+			item.configure();
+			
+		}
+	};
+	this.mantenerme = function(){
+	}
+	this.esconderme = function(){
+	   
+	}
+}
+MainMenuItem.prototype.configure = null;
+MainMenuItem.prototype.mainMenu = null;
+MainMenuItem.prototype.div = null;
+MainMenuItem.prototype.me = null;
+MainMenuItem.prototype.popup = null;
+MainMenuItem.prototype.parentPopup = null;
+MainMenuItem.prototype.title = null;
+MainMenuItem.prototype.tab = null;
+MainMenuItem.prototype.node = null;
+MainMenuItem.prototype.timer = null;
+MainMenuItem.prototype.tipo = null;
+
+function MainMenuItem(me){
+
+	this.configure = function(){
+		me = this;
+		/*si tengo un sub menu agregar*/
+		
+		if (this.node[MENU.MENU] != null)
+		{
+			this.popup = new PopupMenu();
+			this.popup.menuItem = this;
+			this.popup.configure();
+			
+		}else{
+			me.div.style.backgroundPosition = '-2000px -2000px';
+		}
+		logMessage(this.node[MENU.VALUE]);
+		
+		addEvent(me.div,'onmouseover',this.mouseOver);
+		addEvent(me.div,'onmouseout',this.mouseOut);
+		addEvent(me.div,'onclick',this.click);
+	};
+	
+	this.mouseOver = function(){
+	    me.timer = setTimeout(me.mostrarHijos,100);
+        
+	};
+	this.mouseOut = function(){
+	    me.timer = setTimeout(me.esconderme,300);
+	};
+	this.click = function(){
+	
+	};
+	this.mostrarHijos = function(){
+	    if (me.popup != null){
+	        me.popup.mostrar(me);
+	        me.mantenerme(me);
+	    }
+	}
+	this.esconderme = function(){
+	   me.esconderHijos();
+	   me.parentPopup.esconderme();
+	}
+	this.esconderHijos = function(){
+	    if (me.popup != null){
+	        me.popup.esconder(me);
+	    }
+	}
+	this.mantenerme = function(){
+	   me.parentPopup.mantenerme(me);
+	}
+	
+}
+PopupMenu.prototype.x = null;
+PopupMenu.prototype.y = null;
+PopupMenu.prototype.menuItem = null;
+PopupMenu.prototype.div = null;
+PopupMenu.prototype.sub = null;
+PopupMenu.prototype.items = null;
+PopupMenu.prototype.timer = null;
+PopupMenu.prototype.parentPopup = null;
+PopupMenu.prototype.itemSelected = null;
+
+function PopupMenu(me){
+
+	this.configure = function(){
+		this.div = createDiv();
+		this.div.className = 'main_menu_items_float';
+		getBody().appendChild(this.div);
+		me = this;
+
+		this.parentPopup = this.menuItem.parentPopup;
+		try{
+			if (this.menuItem.node[MENU.MENU] != null)
+			{
+				var menuItems = getChildNodes(this.menuItem.node[MENU.MENU]);
+				this.items = new Array();
+
+				for (var i=0;i<menuItems.length ;i++ )
+				{
+					var node = loadNode(menuItems[i]);
+					var item = new MainMenuItem();
+					item.parentPopup = me;
+					this.items.push(item);
+					item.div = createDiv();
+					item.div.className = 'main_menu_item';
+					item.div.appendChild(createParagraph(node[MENU.LABEL]));
+					this.div.appendChild(item.div);
+					item.title = node[MENU.LABEL];
+					item.node = node;
+					item.tipo = 2;
+					item.configure();
+				}
+			}	
+		}catch(ex){
+			alert(ex);
+			throw ex;
+		}
+	};
+	this.show = function(){
+	        if (me.menuItem.tipo == 1)
+		    {
+			    me.div.style.left = getX(me.menuItem.div)+'px';
+			    me.div.style.top = getY(me.menuItem.div)+getHeight(me.menuItem.div)+'px';
+		    }else{
+			    me.div.style.left = getX(me.menuItem.div)+getWidth(me.menuItem.div)+'px';
+			    me.div.style.top = getY(me.menuItem.div)+'px';
+		    }
+		    me.div.style.display = 'block';
+	};
+	this.hide = function(){
+        me.div.style.display = 'none';
+	};
+	this.mostrar = function(itemSelected){
+	    me.timer = setTimeout(me.show,400);
+	    
+	    me.itemSelected = itemSelected;
+	}
+	this.esconder = function(itemSelected){
+	    me.timer = setTimeout(me.hide,400);
+	    me.itemSelected = null;
+	}
+	this.mantenerme = function(){
+	    clearTimeout(me.timer);
+	    if (me.itemSelected != null){
+	        /*mantener */
+	        me.itemSelected.parentPopup.mantenerme();   
+	    }
+	}
+	this.esconderme = function(){
+	    if (me.timer != null)
+	        clearTimeout(me.timer);
+	    if (me.itemSelected != null){
+	        /*esconder al popup padre*/
+	        me.itemSelected.parentPopup.esconderme();   
+	    }
+	}
+	
+}
+ // -->
+
+

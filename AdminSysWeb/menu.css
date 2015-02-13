@@ -1,0 +1,164 @@
+/* Page */
+body,html,div,blockquote,img,label,p,h1,h2,h3,h4,h5,h6,pre,ul,ol,li,dl,dt,dd,form,a,fieldset,input,th,td{border:0;outline:none;margin:0;padding:0;}
+
+.modulo-actual
+{
+    color: #000;
+    background-color:#E0ECF8;
+    font-family:Arial, Helvetica, sans-serif;    
+    font-size: 13px;
+    text-align: center;
+    width: 90%;
+    height: 90%;
+    margin: 0;
+    padding: 2px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+ul{list-style:none;}
+
+body {font: normal 10px Arial, sans-serif;}
+.demo-container {padding: 0px 0;}
+
+/* Mega Menu Styles */
+.mega-menu ul, .mega-menu ul li {list-style: none;}
+.mega-menu ul {position: relative; padding: 0; margin: 0;}
+.mega-menu ul li ul {display: none;}
+.mega-menu .sub {display: none;}
+.mega-menu .sub ul {display: block;}
+
+#mega-menu {
+font: normal 10px Arial, sans-serif; 
+list-style: none; 
+position: relative; 
+padding: 0; 
+margin: 0;
+}
+
+.blue {
+    font: normal 10px Arial, sans-serif; 
+    line-height: 16px;
+}
+.blue ul.mega-menu, .blue ul.mega-menu, .blue ul.mega-menu li {
+    margin: 0; 
+    padding: 0; 
+    border: none;
+    background: #E6E6E6;
+}
+/*Solo para el ul principal, donde aparecen la barra de menu*/
+.blue ul.mega-menu{
+    background: #8998a8 url(img/bg_celeste.png) repeat-x 0 -88px; 
+    width: 100%; 
+    height: 25px; 
+    border-right: 1px solid #536573; 
+    border-left: 1px solid #536573; 
+    position: relative;
+}
+/*Para todos los li*/
+.blue ul.mega-menu li {
+    float: left; 
+    margin: 0; 
+    padding: 0; 
+    font-size: 11px; 
+    /*font-weight: bold;*/
+}
+/*Botones principales del Menu*/
+.blue ul.mega-menu li a {
+    float: left; 
+    display: block; 
+    color: #fff; 
+    padding: 4px 15px 4px 8px; 
+    background: url(img/bg_celeste.png) repeat-x 0 -88px;
+    text-decoration: none;
+    border-right: 1px solid #fff; 
+}
+.blue ul.mega-menu li a.dc-mega {position: relative;}
+
+/*Esto es para agregar la flecha al botón*/
+.blue ul.mega-menu li a .dc-mega-icon {
+    display: block; 
+    position: absolute; 
+    top: 12px; 
+    right: 4px; 
+    width: 8px; 
+    height: 6px; 
+    background: url(img/arrow.png) no-repeat 0 0;
+}
+.blue ul.mega-menu li.mega-hover a .dc-mega-icon {
+    background-position: 0 100%;
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+.blue ul.mega-menu li .sub-container {
+    position: absolute; 
+    background: url(img/bg_sub_left.png) no-repeat 0 100%; 
+    padding-left: 7px; 
+    margin-left: -3px;
+}
+.blue ul.mega-menu li .sub {
+    background: url(img/bg_sub.png) no-repeat 100% 100%; 
+    padding: 20px 20px 20px 10px;}
+.blue ul.mega-menu li .sub-container.mega .sub {
+    padding: 7px 7px 7px 0;}
+.blue ul.mega-menu li .sub .row {
+    width: 100%; 
+    overflow: hidden; 
+    clear: both;}
+.blue ul.mega-menu li .sub li {
+    list-style: none; 
+    float: none; 
+    width: 170px; 
+    font-size: 1em; 
+    font-weight: normal;}
+.blue ul.mega-menu li .sub li.mega-hdr {
+    margin: 0 5px 5px 0; 
+    float: left;}
+.blue ul.mega-menu li .sub li.mega-hdr.last {
+    margin-right: 0;}
+/*subtitulos*/
+.blue ul.mega-menu li .sub li.mega-hdr a.mega-hdr-a {
+    padding: 2px 2px 2px 10px; 
+    margin-bottom: 0px; 
+    background: #304B73 url(img/bg_mega_hdr.png) no-repeat 0 0; 
+    font-weight: bold; 
+    color: #fff; 
+    text-shadow: 1px 1px 1px #333;}
+/*subtitulos hover*/
+.blue ul.mega-menu li .sub li.mega-hdr a.mega-hdr-a:hover {
+    color: #A8B7CF; 
+    text-shadow: none;}
+.blue ul.mega-menu li.mega-hover a, .blue ul.mega-menu li a:hover {
+    background-position: 100% -40px; 
+    color: #000; 
+    text-shadow: none;
+    cursor: pointer;
+}
+/*opciones*/
+.blue ul.mega-menu li .sub a {
+    background: #E6E6E6; 
+    border: none; 
+    text-shadow: none; 
+    color: #111; 
+    padding: 3px 5px; 
+    display: block; 
+    float: none; 
+    text-decoration: none; 
+    font-size: 0.8em;}
+/*opciones hover*/
+.blue ul.mega-menu .sub li.mega-hdr li a:hover {
+    color: white; 
+    cursor: pointer;
+    background: #81BEF7;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+.blue ul.mega-menu .sub ul li {
+    padding-right: 0;}
+.blue ul.mega-menu li .sub-container.non-mega .sub {
+    padding: 20px 20px 20px 0;}
+.blue ul.mega-menu li .sub-container.non-mega li {
+    padding: 0; 
+    width: 190px; 
+    margin: 0;}

@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AdminSysWeb", "http://localhost/AdminSysWeb", "{FC490B6F-F4B8-47A1-8B13-65D407633E14}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/AdminSysWeb"
+		Debug.AspNetCompiler.PhysicalPath = "AdminSysWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AdminSysWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AdminSysWeb"
+		Release.AspNetCompiler.PhysicalPath = "AdminSysWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AdminSysWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "AdminSysWeb\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1F53C19-E80E-409D-BF4B-6A7B4BA07F67}"
+	ProjectSection(SolutionItems) = preProject
+		CargaMantenimientos.psess = CargaMantenimientos.psess
+		Performance1.psess = Performance1.psess
+		Performance2.psess = Performance2.psess
+		Performance3.psess = Performance3.psess
+		Performance4.psess = Performance4.psess
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://srv-teamfound:8080/tfs/siges
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = http://localhost/AdminSysWeb
+		SccProjectName1 = AdminSysWeb
+		SccLocalPath1 = AdminSysWeb
+		SccProjectEnlistmentChoice1 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC490B6F-F4B8-47A1-8B13-65D407633E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC490B6F-F4B8-47A1-8B13-65D407633E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

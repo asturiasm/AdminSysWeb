@@ -1,0 +1,2176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataRetrievalWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="SIGEStcpBinding_IDataRetrievalWCF_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="ServicioLocalSIGEStcpBinding_IDataRetrievalWCF_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SIGES.WCF" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd5" namespace="Metadata_POCO" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd6" namespace="POCO" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SIGES.Clasificadores.AD.POCO" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd8" namespace="Clasificadores_POCO" />
+      <xsd:import schemaLocation="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc?xsd=xsd9" namespace="Tickets_POCO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataRetrievalWCF_getTipoDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTipoDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getTipoDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTipoDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_loadParametros_InputMessage">
+    <wsdl:part name="parameters" element="tns:loadParametros" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_loadParametros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loadParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyPage" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyPageRank_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyPageRank" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyPageRank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyPageRankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyPagebyUC_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyPagebyUC" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyPagebyUC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyPagebyUCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabySQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabySQL" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabySQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabySQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabySQLbyPool_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabySQLbyPool" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabySQLbyPool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabySQLbyPoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_loadListaReportes_InputMessage">
+    <wsdl:part name="parameters" element="tns:loadListaReportes" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_loadListaReportes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loadListaReportesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabySQLID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabySQLID" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabySQLID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabySQLIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyIDReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyIDReporte" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyIDReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyIDReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyID" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyIDRank_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyIDRank" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getDatabyIDRank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatabyIDRankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getPredicadoGranularidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPredicadoGranularidad" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getPredicadoGranularidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPredicadoGranularidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getUnidadesCompradoras_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUnidadesCompradoras" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getUnidadesCompradoras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUnidadesCompradorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getPredicadoGranularidadAdFunciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPredicadoGranularidadAdFunciones" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getPredicadoGranularidadAdFunciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPredicadoGranularidadAdFuncionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_puedeCambiarClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:puedeCambiarClave" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_puedeCambiarClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:puedeCambiarClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_expiraTiempoClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:expiraTiempoClave" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_expiraTiempoClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:expiraTiempoClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_LogIN_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogIN" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_LogIN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogINResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_ValidaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_ValidaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_DatosUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:DatosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_DatosUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DatosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_FuncionesUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:FuncionesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_FuncionesUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FuncionesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_CambioClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambioClave" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_CambioClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambioClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_LogOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogOff" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_LogOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_ActualizarSesionUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSesionUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_ActualizarSesionUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSesionUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_EjecutarDML_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarDML" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_EjecutarDML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarDMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_EjecutarDMLMetadatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarDMLMetadatos" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_EjecutarDMLMetadatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarDMLMetadatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_esAccesible_InputMessage">
+    <wsdl:part name="parameters" element="tns:esAccesible" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_esAccesible_OutputMessage">
+    <wsdl:part name="parameters" element="tns:esAccesibleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_LinkOnExpand_InputMessage">
+    <wsdl:part name="parameters" element="tns:LinkOnExpand" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_LinkOnExpand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LinkOnExpandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getLOV_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLOV" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_getLOV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TienePermiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:TienePermiso" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TienePermiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TienePermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_EjecutarTarea_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarTarea" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_EjecutarTarea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarTareaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_ObtenerTareas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTareas" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_ObtenerTareas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTareasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_LimpiarTareas_InputMessage">
+    <wsdl:part name="parameters" element="tns:LimpiarTareas" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_LimpiarTareas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LimpiarTareasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_SolicitaEjecucionSNIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitaEjecucionSNIP" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_SolicitaEjecucionSNIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitaEjecucionSNIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_DynamicTransactionPool_InputMessage">
+    <wsdl:part name="parameters" element="tns:DynamicTransactionPool" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_DynamicTransactionPool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DynamicTransactionPoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_DynamicTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DynamicTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_DynamicTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DynamicTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_execStoredProcedure_InputMessage">
+    <wsdl:part name="parameters" element="tns:execStoredProcedure" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_execStoredProcedure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:execStoredProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_bloqueoSemaforo_InputMessage">
+    <wsdl:part name="parameters" element="tns:bloqueoSemaforo" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_bloqueoSemaforo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bloqueoSemaforoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_GetExcepciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcepciones" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_GetExcepciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExcepcionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_Ejercicios_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ejercicios" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_Ejercicios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjerciciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_esSecretaria_InputMessage">
+    <wsdl:part name="parameters" element="tns:esSecretaria" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_esSecretaria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:esSecretariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_CargarToolbar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarToolbar" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_CargarToolbar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarToolbarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_Boletin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Boletin" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_Boletin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoletinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_HistorialGestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:HistorialGestion" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_HistorialGestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HistorialGestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_loadTabGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:loadTabGroup" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_loadTabGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loadTabGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TabGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:TabGroup" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TabGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TabGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_ObjetoInicial_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObjetoInicial" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_ObjetoInicial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObjetoInicialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_MenuUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:MenuUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_MenuUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MenuUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_Entidades_InputMessage">
+    <wsdl:part name="parameters" element="tns:Entidades" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_Entidades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EntidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_UnidadesCompradoras_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnidadesCompradoras" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_UnidadesCompradoras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnidadesCompradorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_CentrosCosto_InputMessage">
+    <wsdl:part name="parameters" element="tns:CentrosCosto" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_CentrosCosto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CentrosCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_NoticiasVigentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:NoticiasVigentes" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_NoticiasVigentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NoticiasVigentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsGenerados_InputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsGenerados" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsGenerados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsGeneradosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsAsignados_InputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsAsignados" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsAsignados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsAsignadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsRechazados_InputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsRechazados" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsRechazados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsRechazadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsFinalizados_InputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsFinalizados" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsFinalizados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsFinalizadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsReporte" />
+  </wsdl:message>
+  <wsdl:message name="IDataRetrievalWCF_TicketsReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TicketsReporteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataRetrievalWCF">
+    <wsdl:operation name="getTipoDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getTipoDatabase" message="tns:IDataRetrievalWCF_getTipoDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getTipoDatabaseResponse" message="tns:IDataRetrievalWCF_getTipoDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loadParametros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/loadParametros" message="tns:IDataRetrievalWCF_loadParametros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/loadParametrosResponse" message="tns:IDataRetrievalWCF_loadParametros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyPage" message="tns:IDataRetrievalWCF_getDatabyPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyPageResponse" message="tns:IDataRetrievalWCF_getDatabyPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPageRank">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyPageRank" message="tns:IDataRetrievalWCF_getDatabyPageRank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyPageRankResponse" message="tns:IDataRetrievalWCF_getDatabyPageRank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPagebyUC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyPagebyUC" message="tns:IDataRetrievalWCF_getDatabyPagebyUC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyPagebyUCResponse" message="tns:IDataRetrievalWCF_getDatabyPagebyUC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabySQL" message="tns:IDataRetrievalWCF_getDatabySQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabySQLResponse" message="tns:IDataRetrievalWCF_getDatabySQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLbyPool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabySQLbyPool" message="tns:IDataRetrievalWCF_getDatabySQLbyPool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabySQLbyPoolResponse" message="tns:IDataRetrievalWCF_getDatabySQLbyPool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loadListaReportes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/loadListaReportes" message="tns:IDataRetrievalWCF_loadListaReportes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/loadListaReportesResponse" message="tns:IDataRetrievalWCF_loadListaReportes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabySQLID" message="tns:IDataRetrievalWCF_getDatabySQLID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabySQLIDResponse" message="tns:IDataRetrievalWCF_getDatabySQLID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyIDReporte" message="tns:IDataRetrievalWCF_getDatabyIDReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyIDReporteResponse" message="tns:IDataRetrievalWCF_getDatabyIDReporte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyID" message="tns:IDataRetrievalWCF_getDatabyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyIDResponse" message="tns:IDataRetrievalWCF_getDatabyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDRank">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyIDRank" message="tns:IDataRetrievalWCF_getDatabyIDRank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getDatabyIDRankResponse" message="tns:IDataRetrievalWCF_getDatabyIDRank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidad" message="tns:IDataRetrievalWCF_getPredicadoGranularidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidadResponse" message="tns:IDataRetrievalWCF_getPredicadoGranularidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUnidadesCompradoras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getUnidadesCompradoras" message="tns:IDataRetrievalWCF_getUnidadesCompradoras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getUnidadesCompradorasResponse" message="tns:IDataRetrievalWCF_getUnidadesCompradoras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidadAdFunciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidadAdFunciones" message="tns:IDataRetrievalWCF_getPredicadoGranularidadAdFunciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidadAdFuncionesResponse" message="tns:IDataRetrievalWCF_getPredicadoGranularidadAdFunciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="puedeCambiarClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/puedeCambiarClave" message="tns:IDataRetrievalWCF_puedeCambiarClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/puedeCambiarClaveResponse" message="tns:IDataRetrievalWCF_puedeCambiarClave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="expiraTiempoClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/expiraTiempoClave" message="tns:IDataRetrievalWCF_expiraTiempoClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/expiraTiempoClaveResponse" message="tns:IDataRetrievalWCF_expiraTiempoClave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogIN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/LogIN" message="tns:IDataRetrievalWCF_LogIN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/LogINResponse" message="tns:IDataRetrievalWCF_LogIN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/ValidaUsuario" message="tns:IDataRetrievalWCF_ValidaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/ValidaUsuarioResponse" message="tns:IDataRetrievalWCF_ValidaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/DatosUsuario" message="tns:IDataRetrievalWCF_DatosUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/DatosUsuarioResponse" message="tns:IDataRetrievalWCF_DatosUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FuncionesUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/FuncionesUsuario" message="tns:IDataRetrievalWCF_FuncionesUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/FuncionesUsuarioResponse" message="tns:IDataRetrievalWCF_FuncionesUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambioClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/CambioClave" message="tns:IDataRetrievalWCF_CambioClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/CambioClaveResponse" message="tns:IDataRetrievalWCF_CambioClave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/LogOff" message="tns:IDataRetrievalWCF_LogOff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/LogOffResponse" message="tns:IDataRetrievalWCF_LogOff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSesionUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/ActualizarSesionUsuario" message="tns:IDataRetrievalWCF_ActualizarSesionUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/ActualizarSesionUsuarioResponse" message="tns:IDataRetrievalWCF_ActualizarSesionUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/EjecutarDML" message="tns:IDataRetrievalWCF_EjecutarDML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/EjecutarDMLResponse" message="tns:IDataRetrievalWCF_EjecutarDML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDMLMetadatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/EjecutarDMLMetadatos" message="tns:IDataRetrievalWCF_EjecutarDMLMetadatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/EjecutarDMLMetadatosResponse" message="tns:IDataRetrievalWCF_EjecutarDMLMetadatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="esAccesible">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/esAccesible" message="tns:IDataRetrievalWCF_esAccesible_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/esAccesibleResponse" message="tns:IDataRetrievalWCF_esAccesible_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkOnExpand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/LinkOnExpand" message="tns:IDataRetrievalWCF_LinkOnExpand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/LinkOnExpandResponse" message="tns:IDataRetrievalWCF_LinkOnExpand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLOV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getLOV" message="tns:IDataRetrievalWCF_getLOV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/getLOVResponse" message="tns:IDataRetrievalWCF_getLOV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TienePermiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TienePermiso" message="tns:IDataRetrievalWCF_TienePermiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TienePermisoResponse" message="tns:IDataRetrievalWCF_TienePermiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarTarea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/EjecutarTarea" message="tns:IDataRetrievalWCF_EjecutarTarea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/EjecutarTareaResponse" message="tns:IDataRetrievalWCF_EjecutarTarea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTareas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/ObtenerTareas" message="tns:IDataRetrievalWCF_ObtenerTareas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/ObtenerTareasResponse" message="tns:IDataRetrievalWCF_ObtenerTareas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LimpiarTareas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/LimpiarTareas" message="tns:IDataRetrievalWCF_LimpiarTareas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/LimpiarTareasResponse" message="tns:IDataRetrievalWCF_LimpiarTareas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitaEjecucionSNIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/SolicitaEjecucionSNIP" message="tns:IDataRetrievalWCF_SolicitaEjecucionSNIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/SolicitaEjecucionSNIPResponse" message="tns:IDataRetrievalWCF_SolicitaEjecucionSNIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransactionPool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/DynamicTransactionPool" message="tns:IDataRetrievalWCF_DynamicTransactionPool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/DynamicTransactionPoolResponse" message="tns:IDataRetrievalWCF_DynamicTransactionPool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/DynamicTransaction" message="tns:IDataRetrievalWCF_DynamicTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/DynamicTransactionResponse" message="tns:IDataRetrievalWCF_DynamicTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="execStoredProcedure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/execStoredProcedure" message="tns:IDataRetrievalWCF_execStoredProcedure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/execStoredProcedureResponse" message="tns:IDataRetrievalWCF_execStoredProcedure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bloqueoSemaforo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/bloqueoSemaforo" message="tns:IDataRetrievalWCF_bloqueoSemaforo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/bloqueoSemaforoResponse" message="tns:IDataRetrievalWCF_bloqueoSemaforo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExcepciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/GetExcepciones" message="tns:IDataRetrievalWCF_GetExcepciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/GetExcepcionesResponse" message="tns:IDataRetrievalWCF_GetExcepciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ejercicios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/Ejercicios" message="tns:IDataRetrievalWCF_Ejercicios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/EjerciciosResponse" message="tns:IDataRetrievalWCF_Ejercicios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="esSecretaria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/esSecretaria" message="tns:IDataRetrievalWCF_esSecretaria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/esSecretariaResponse" message="tns:IDataRetrievalWCF_esSecretaria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarToolbar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/CargarToolbar" message="tns:IDataRetrievalWCF_CargarToolbar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/CargarToolbarResponse" message="tns:IDataRetrievalWCF_CargarToolbar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Boletin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/Boletin" message="tns:IDataRetrievalWCF_Boletin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/BoletinResponse" message="tns:IDataRetrievalWCF_Boletin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HistorialGestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/HistorialGestion" message="tns:IDataRetrievalWCF_HistorialGestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/HistorialGestionResponse" message="tns:IDataRetrievalWCF_HistorialGestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loadTabGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/loadTabGroup" message="tns:IDataRetrievalWCF_loadTabGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/loadTabGroupResponse" message="tns:IDataRetrievalWCF_loadTabGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TabGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TabGroup" message="tns:IDataRetrievalWCF_TabGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TabGroupResponse" message="tns:IDataRetrievalWCF_TabGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObjetoInicial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/ObjetoInicial" message="tns:IDataRetrievalWCF_ObjetoInicial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/ObjetoInicialResponse" message="tns:IDataRetrievalWCF_ObjetoInicial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MenuUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/MenuUsuario" message="tns:IDataRetrievalWCF_MenuUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/MenuUsuarioResponse" message="tns:IDataRetrievalWCF_MenuUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Entidades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/Entidades" message="tns:IDataRetrievalWCF_Entidades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/EntidadesResponse" message="tns:IDataRetrievalWCF_Entidades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnidadesCompradoras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/UnidadesCompradoras" message="tns:IDataRetrievalWCF_UnidadesCompradoras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/UnidadesCompradorasResponse" message="tns:IDataRetrievalWCF_UnidadesCompradoras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CentrosCosto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/CentrosCosto" message="tns:IDataRetrievalWCF_CentrosCosto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/CentrosCostoResponse" message="tns:IDataRetrievalWCF_CentrosCosto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NoticiasVigentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/NoticiasVigentes" message="tns:IDataRetrievalWCF_NoticiasVigentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/NoticiasVigentesResponse" message="tns:IDataRetrievalWCF_NoticiasVigentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketsGenerados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsGenerados" message="tns:IDataRetrievalWCF_TicketsGenerados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsGeneradosResponse" message="tns:IDataRetrievalWCF_TicketsGenerados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketsAsignados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsAsignados" message="tns:IDataRetrievalWCF_TicketsAsignados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsAsignadosResponse" message="tns:IDataRetrievalWCF_TicketsAsignados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketsRechazados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsRechazados" message="tns:IDataRetrievalWCF_TicketsRechazados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsRechazadosResponse" message="tns:IDataRetrievalWCF_TicketsRechazados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketsFinalizados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsFinalizados" message="tns:IDataRetrievalWCF_TicketsFinalizados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsFinalizadosResponse" message="tns:IDataRetrievalWCF_TicketsFinalizados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketsReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsReporte" message="tns:IDataRetrievalWCF_TicketsReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataRetrievalWCF/TicketsReporteResponse" message="tns:IDataRetrievalWCF_TicketsReporte_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SIGEShttpBinding_IDataRetrievalWCF" type="tns:IDataRetrievalWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTipoDatabase">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getTipoDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadParametros">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPage">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPageRank">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPageRank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPagebyUC">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPagebyUC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQL">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLbyPool">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQLbyPool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadListaReportes">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadListaReportes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLID">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQLID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDReporte">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyIDReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyID">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDRank">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyIDRank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidad">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUnidadesCompradoras">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getUnidadesCompradoras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidadAdFunciones">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidadAdFunciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="puedeCambiarClave">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/puedeCambiarClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="expiraTiempoClave">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/expiraTiempoClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIN">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LogIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DatosUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuncionesUsuario">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/FuncionesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioClave">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CambioClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LogOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSesionUsuario">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ActualizarSesionUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDML">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarDML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDMLMetadatos">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarDMLMetadatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esAccesible">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/esAccesible" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkOnExpand">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LinkOnExpand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLOV">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TienePermiso">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TienePermiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarTarea">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarTarea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTareas">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ObtenerTareas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LimpiarTareas">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LimpiarTareas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitaEjecucionSNIP">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/SolicitaEjecucionSNIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransactionPool">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DynamicTransactionPool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransaction">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DynamicTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execStoredProcedure">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/execStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bloqueoSemaforo">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/bloqueoSemaforo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcepciones">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/GetExcepciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ejercicios">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Ejercicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esSecretaria">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/esSecretaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarToolbar">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CargarToolbar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Boletin">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Boletin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistorialGestion">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/HistorialGestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadTabGroup">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadTabGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TabGroup">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TabGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObjetoInicial">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ObjetoInicial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MenuUsuario">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/MenuUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entidades">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Entidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnidadesCompradoras">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/UnidadesCompradoras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentrosCosto">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CentrosCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NoticiasVigentes">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/NoticiasVigentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsGenerados">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsGenerados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsAsignados">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsAsignados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsRechazados">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsRechazados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsFinalizados">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsFinalizados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsReporte">
+      <soap:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsReporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SIGEStcpBinding_IDataRetrievalWCF" type="tns:IDataRetrievalWCF">
+    <wsp:PolicyReference URI="#SIGEStcpBinding_IDataRetrievalWCF_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="getTipoDatabase">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getTipoDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadParametros">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPage">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPageRank">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPageRank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPagebyUC">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPagebyUC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQL">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLbyPool">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQLbyPool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadListaReportes">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadListaReportes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLID">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQLID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDReporte">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyIDReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyID">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDRank">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyIDRank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidad">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUnidadesCompradoras">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getUnidadesCompradoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidadAdFunciones">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidadAdFunciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="puedeCambiarClave">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/puedeCambiarClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="expiraTiempoClave">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/expiraTiempoClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIN">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LogIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DatosUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuncionesUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/FuncionesUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioClave">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CambioClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LogOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSesionUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ActualizarSesionUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDML">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarDML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDMLMetadatos">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarDMLMetadatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esAccesible">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/esAccesible" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkOnExpand">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LinkOnExpand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLOV">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getLOV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TienePermiso">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TienePermiso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarTarea">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarTarea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTareas">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ObtenerTareas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LimpiarTareas">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LimpiarTareas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitaEjecucionSNIP">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/SolicitaEjecucionSNIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransactionPool">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DynamicTransactionPool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransaction">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DynamicTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execStoredProcedure">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/execStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bloqueoSemaforo">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/bloqueoSemaforo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcepciones">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/GetExcepciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ejercicios">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Ejercicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esSecretaria">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/esSecretaria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarToolbar">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CargarToolbar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Boletin">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Boletin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistorialGestion">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/HistorialGestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadTabGroup">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadTabGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TabGroup">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TabGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObjetoInicial">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ObjetoInicial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MenuUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/MenuUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entidades">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Entidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnidadesCompradoras">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/UnidadesCompradoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentrosCosto">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CentrosCosto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NoticiasVigentes">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/NoticiasVigentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsGenerados">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsGenerados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsAsignados">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsAsignados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsRechazados">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsRechazados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsFinalizados">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsFinalizados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsReporte">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioLocalSIGEStcpBinding_IDataRetrievalWCF" type="tns:IDataRetrievalWCF">
+    <wsp:PolicyReference URI="#ServicioLocalSIGEStcpBinding_IDataRetrievalWCF_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="getTipoDatabase">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getTipoDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadParametros">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPage">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPageRank">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPageRank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyPagebyUC">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyPagebyUC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQL">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLbyPool">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQLbyPool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadListaReportes">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadListaReportes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabySQLID">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabySQLID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDReporte">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyIDReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyID">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatabyIDRank">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getDatabyIDRank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidad">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUnidadesCompradoras">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getUnidadesCompradoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPredicadoGranularidadAdFunciones">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getPredicadoGranularidadAdFunciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="puedeCambiarClave">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/puedeCambiarClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="expiraTiempoClave">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/expiraTiempoClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIN">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LogIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DatosUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FuncionesUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/FuncionesUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioClave">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CambioClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LogOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSesionUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ActualizarSesionUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDML">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarDML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarDMLMetadatos">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarDMLMetadatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esAccesible">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/esAccesible" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkOnExpand">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LinkOnExpand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLOV">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/getLOV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TienePermiso">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TienePermiso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarTarea">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/EjecutarTarea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTareas">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ObtenerTareas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LimpiarTareas">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/LimpiarTareas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitaEjecucionSNIP">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/SolicitaEjecucionSNIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransactionPool">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DynamicTransactionPool" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DynamicTransaction">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/DynamicTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="execStoredProcedure">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/execStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bloqueoSemaforo">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/bloqueoSemaforo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExcepciones">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/GetExcepciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ejercicios">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Ejercicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esSecretaria">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/esSecretaria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarToolbar">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CargarToolbar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Boletin">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Boletin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistorialGestion">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/HistorialGestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadTabGroup">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/loadTabGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TabGroup">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TabGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObjetoInicial">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/ObjetoInicial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MenuUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/MenuUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entidades">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/Entidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnidadesCompradoras">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/UnidadesCompradoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentrosCosto">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/CentrosCosto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NoticiasVigentes">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/NoticiasVigentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsGenerados">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsGenerados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsAsignados">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsAsignados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsRechazados">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsRechazados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsFinalizados">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsFinalizados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketsReporte">
+      <soap12:operation soapAction="http://tempuri.org/IDataRetrievalWCF/TicketsReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataRetrievalWCF">
+    <wsdl:port name="SIGEShttpBinding_IDataRetrievalWCF" binding="tns:SIGEShttpBinding_IDataRetrievalWCF">
+      <soap:address location="http://sigesorvonton/SIGESDataretrieval/DataRetrievalWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="SIGEStcpBinding_IDataRetrievalWCF" binding="tns:SIGEStcpBinding_IDataRetrievalWCF">
+      <soap12:address location="net.tcp://dti-masturiasl.minfin.di.gobierno/SIGESDataretrieval/DataRetrievalWCF.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://dti-masturiasl.minfin.di.gobierno/SIGESDataretrieval/DataRetrievalWCF.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="ServicioLocalSIGEStcpBinding_IDataRetrievalWCF" binding="tns:ServicioLocalSIGEStcpBinding_IDataRetrievalWCF">
+      <soap12:address location="net.pipe://dti-masturiasl.minfin.di.gobierno/SIGESDataretrieval/DataRetrievalWCF.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://dti-masturiasl.minfin.di.gobierno/SIGESDataretrieval/DataRetrievalWCF.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

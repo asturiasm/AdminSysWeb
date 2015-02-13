@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="Módulos del Sistema">
+      <siteMapNode url="~/general/main2010.aspx?pobj=7" title="PreOrdenes" description="Módulo de PreOrdenes de Compra">
+        <siteMapNode url="~/NAV/PC/M00811715.aspx" title="PreOrden de Compra" description="Gestiones de PreOrden" />
+      </siteMapNode>
+      <siteMapNode url="~/general/main2010.aspx?pobj=8" title="Proceso de Compra" description="Módulo de Proceso de Compra">
+        <siteMapNode url="~/NAV/PC/M00817315.aspx" title="Consolidaciones" description="Gestiones de Consolidación" />
+        <siteMapNode url="~/NAV/PC/M00817564.aspx" title="PreOrdenes Recibidas" description="Preordenes recibidas por la unidad de compras" />
+      </siteMapNode>
+      <siteMapNode url="~/general/main2010.aspx?pobj=9" title="Nomina PpR" description="Módulo de Nomina PpR">
+        <siteMapNode url="~/NAV/NPR/M00818405.aspx" title="Politica Instituciónal" description="Politica Instituciónal">          
+      </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>

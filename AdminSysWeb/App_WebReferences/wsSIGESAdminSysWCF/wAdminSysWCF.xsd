@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="NominaPpR_POCO" elementFormDefault="qualified" targetNamespace="NominaPpR_POCO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfclsObjetoPoco">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsObjetoPoco" nillable="true" type="tns:clsObjetoPoco" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsObjetoPoco" nillable="true" type="tns:ArrayOfclsObjetoPoco" />
+  <xs:complexType name="clsObjetoPoco">
+    <xs:sequence>
+      <xs:element name="NIVEL" type="xs:int" />
+      <xs:element name="NOMBRE_LOGICO" nillable="true" type="xs:string" />
+      <xs:element name="OBJETO" nillable="true" type="xs:string" />
+      <xs:element name="OBJETO_PADRE" nillable="true" type="xs:string" />
+      <xs:element name="TIPO_OBJETO" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsObjetoPoco" nillable="true" type="tns:clsObjetoPoco" />
+</xs:schema>

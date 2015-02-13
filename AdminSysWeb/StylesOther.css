@@ -1,0 +1,513 @@
+/* Hoja de estilos CSS predeterminada para un nuevo proyecto de aplicación Web*/
+
+/*Clase a aplicar al elemento Body*/
+.FondoPantalla
+{
+	background-color: white;	
+}
+
+
+/*Clase a aplicar a los controles Grid*/
+.Grid
+{
+	border-width:10;
+}
+/*Clase RUTA*/
+.RUTA
+{
+	text-align:Left;
+	background-color: #aed9ff;/*#4ea749;*//*#006699;*/ /*"#336666";*/
+	font-size:10pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:Black;/*White;*/
+}
+.RUTAF
+{
+	text-align:Left;
+	background-color: #aed9ff;/*#4ea749;*//*#006699;*/ /*"#336666";*/
+	font-size:9pt;
+	font-family:Verdana;
+	color:Black;/*White;*/
+}
+
+/*Clase a aplicar al encabezado de un grid*/
+.Encabezado
+{
+	text-align:center;
+	background-color:#122f73;
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Arial;
+	color:White;
+}
+
+.CeldasResumen
+{
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Arial;
+	color:White;
+}
+
+.CeldasResumenAlterno
+{
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Arial;
+	color:#122f73;
+}
+
+
+/*Clase a aplicar a las filas impares del detalle del grid*/
+.DetallePrincipal
+{
+	background-color:#ffffff; /*Blanco*/
+	font-size:7pt;
+	font-family:Arial;
+	color:#122f73; /*azul*/
+}
+
+/*Clase a aplicar a las filas pares del detalle del grid*/
+.DetalleAlterno
+{
+	/*background-color:#ccffff;*/
+	/*background-color:#e8f4f8;*/
+	background-color:#b3d7f9;
+	/*background-color:White;*/
+	font-size:7pt;
+	font-family:Arial;
+	/*font-weight:bold;*/
+	color:#122f73;
+}
+
+.DetalleNoticia
+{
+	background-color:White;
+	font-size:7pt;
+	font-family:Verdana;
+	color:#122f73;
+}
+
+.DetalleNuevo
+{
+	background-color:White;
+	font-size:8pt;
+	font-family:Verdana;
+	font-weight:bold;
+	color:Red;
+}
+
+/*Clase a aplicar a los indicadores de paginas del grid*/
+.Pagineo
+{
+	background-color:#122f73;
+	text-align:center;
+	font-size:10pt;
+	font-family:Verdana;
+	font-weight:bold;
+	color:white;
+}
+
+/*Clase a aplicar al footer del grid*/
+.Footer
+{
+	text-align:center;
+	background-color:white;
+	font-size:10pt;
+	font-weight:bold;
+	font-family:Verdana;
+	/*color:darkblue;	*/
+	color:Silver;
+}
+
+/*Clase a aplicar al arbol de menu*/
+.TreeMenu
+{
+	background-color:White;
+	font-size:6pt;
+}
+
+/*Clase a aplicar a las labels*/
+.Etiqueta
+{
+	text-align:center;
+	background-color:#122f73;
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:white;
+}
+
+/*Clase a aplicar a los textbox*/
+.Texto
+{
+	font-family:Verdana;
+	font-size:8pt;
+	font-weight:bold;
+	color:#122f73;
+}
+
+/*Clase a aplicar a los checkbox*/
+.CheckBox
+{
+	font-family:Verdana;
+	font-size:8pt;
+	font-weight:bold
+}
+
+/*Clase a aplicar a las listbox*/
+.ListBox
+{
+	font-family:Verdana;
+	font-size:8pt;
+	font-weight: normal;
+}
+
+/*Clase a aplicar a los Botones*/
+.Boton
+{
+	font-family:Verdana;
+	font-size:11pt;
+	font-weight:bold
+}
+
+/*Clase a aplicar a los TextArea*/
+.TextArea
+{
+	font-family:Verdana;
+	font-size:11pt;
+	font-weight:bold
+}
+
+/*Clase a aplicar a los Radio Buttons*/
+.Radio
+{
+	font-family:Verdana;
+	font-size:11pt;
+	font-weight:bold
+}
+
+/*Clase para Tablas que agrupan controles*/
+.Tabla1
+{
+	border-width:0;
+}
+
+.ColTituloOff
+{
+	font-weight: normal;
+	font-size: 8pt;
+	color: #f5f5dc;
+	font-family: Verdana;
+	background-color: #6699cc;
+	text-align: center;
+}
+/*Clase para Columnas de titulos de las tablas que agrupan controles*/
+.ColTitulo
+{
+	text-align:center;
+	background-color:#4e7b9a;/*celesteoscuro*/
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:white;
+}
+.ColTituloNuevo
+{
+	text-align:center;
+	background-color:#122f73;
+	font-size:10pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:white;
+}
+.ColDatosTotalizador
+{
+	background-color:#daeeff;
+	font-size:8pt;
+	font-family:Arial;
+	color:#daeeff;
+	border-bottom: #122f73 thin solid;
+}
+
+/*Clase para Columnas de datos de las tablas que agrupan controles*/
+.ColDatos
+{
+	background-color:#ddeffb;
+	font-size:8pt;
+	font-family:Verdana;
+	color:Black;
+}
+.ColDatosNuevo
+{
+	/*background-color:#66ccff;*/
+	background-color:#6098c8;
+	font-size:8pt;
+	font-family:Verdana;
+	color:Black;
+}
+.MensajeError
+{
+	font-size:9pt;
+	font-family:Verdana;
+	color: Yellow;
+	font-weight:bold;
+}
+
+.LinkBlanco
+{
+	color:white;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+
+.LinkNegro
+{
+	/*color:Blue;*/
+	color:#122f73;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+
+.LinkButton
+{
+	font-family: Arial;
+	font-size: 9pt;
+	color: #000099;
+}
+
+
+.LinkBlanco A:link{text-decoration: underline; color: Orange;}
+.LinkBlanco A:visited{text-decoration: underline; color: Orange;}
+.LinkBlanco A:active{text-decoration: underline; color: Orange;}
+
+.LinkNegro A:link{text-decoration: underline; color: Orange;}
+.LinkNegro A:visited{text-decoration: underline; color: Orange;}
+.LinkNegro A:active{text-decoration: underline; color: Orange;}
+
+.MensajeBienvenida
+{
+	font-size:10pt;
+	font-family:Verdana;
+	color: #006699;
+	font-weight:bold;
+}
+
+.MensajeBlanco
+{
+	font-size:8pt;
+	font-family:Verdana;
+	color: White;
+	font-weight:bold;
+}
+
+.DropDownList1
+{
+	font-size:8pt;
+	font-family:Arial;
+	color: Blue;
+}
+
+.DropDownList2
+{
+	font-size:9pt;
+	font-family:Arial;
+	color: Blue;
+}
+.FondoMenu
+{
+	/*background-color:white;*/
+	background-color:#122f73;
+}
+	
+.Aviso
+{
+	background-color:White;
+	text-align:left;
+	font-family:Tahoma;
+	font-size:10pt;
+	color:#006699;
+	font-weight:bold;
+}	
+
+.AvisoEspera
+{
+	background-color:White;
+	text-align:left;
+	font-family:Tahoma;
+	font-size:15pt;
+	color:#006699;
+	font-weight:bold;
+}	
+	
+.TituloAplicacion
+{
+	color:#122f73;
+	text-align:left;
+	background-color:#5691ba;/*celeste*/
+	font-family:Arial;
+	font-size:12pt;
+}
+
+/*Clase para Columnas de titulos de las tablas que agrupan controles*/
+.ColTituloCollapseOpen
+{
+	text-align:left;
+	background-color:#122f73;
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:White;
+	height: 20px;
+}
+
+.ColTituloCollapseOpenActive
+{
+	text-align:left;
+	background-color:#122f73;
+	font-size:10pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:White;
+	height: 20px;
+}
+
+.ColTituloCollapseClosed
+{
+	text-align:left;
+	background-color:#122f73;	
+	font-size:8pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:White;
+	height: 41px;
+}
+
+.ColTituloCollapseClosedActive
+{
+	text-align:left;
+	background-color:#122f73;
+	font-size:10pt;
+	font-weight:bold;
+	font-family:Verdana;
+	color:White;
+	height: 41px;
+}
+
+.TextoHelp
+{
+	color:#122f73;
+	text-align:left;
+	background-color:White;
+	font-family:Arial;
+	font-size:10pt;
+}
+/*--FIN Clases colapsables*/
+.LogOutInterno
+{
+	width: 317px;
+	position: absolute;
+	height: 17em;
+	background-color: #184a91;
+	top: 25%;
+	margin-left:30%;
+}
+.Wizard
+{
+	text-align: left;
+	background-color:#203B6A;
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: Verdana;
+	color: white;
+	height: 20px;
+	line-height: 25px;
+}
+.TituloWizard
+{
+	text-align: left;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+/*opciones de el wizard*/
+/*Cuando no est seleccionado*/
+.NoSelectedItemWizard
+{
+	text-align: left;
+	background-color:#203b6a;/*azulOscuro*/
+	vertical-align:top;
+	color:white;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+/*Cuando esta seleccionado*/
+.SelectedItemWizard
+{
+	text-align: left;
+	background-color:#ddeffb;/*celeste*/
+	vertical-align:top;
+	color:#203b6a;/*azulOscuro*/
+	font-family:Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+
+
+
+
+.AlineacionDerecha
+{
+	text-align:right;
+}
+
+.Disable
+{
+    readonly:True;
+}
+.RowsPan2
+{
+    rowspan:2;
+}
+
+.TabLinked
+{
+	color:#122f73;
+	font-weight:bold;
+	font-size:7pt;
+	font-family:verdana;	
+}
+
+.TabSelected
+{
+	color:#122f73;
+	font-weight:bold;
+	font-size:7pt;
+	font-family:verdana;	
+}
+
+.titulopagina
+{
+	font-size: 8pt;
+	color: #043a69;
+	font-family: Verdana;
+	font-weight:bold;
+}
+
+.TabLinked A:link{text-decoration: underline; color: Orange;}
+.TabLinked A:visited{text-decoration: underline; color: Orange;}
+.TabLinked A:active{text-decoration: underline; color: Orange;}
+
+.TabSelected A:link{text-decoration: underline; color: Orange;}
+.TabSelected A:visited{text-decoration: underline; color: Orange;}
+.TabSelected A:active{text-decoration: underline; color: Orange;}
+
+.ElementoOculto
+{
+	display: none;
+	width: 0;
+	height: 0;
+}

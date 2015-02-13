@@ -1,0 +1,37 @@
+/* Hoja de estilos CSS para el Frame Superior del Sistema*/
+.WComboTitulo
+{
+	font-style:oblique;
+	border-style:ridge;
+	border-width:1;
+}
+
+.WComboUC
+{
+	Width:80%;
+	font-style:oblique;
+	border-style:ridge;
+	border-width:1;
+}
+
+.ColumnaAuxFrameSuperior
+{
+	WIDTH: 526px; 
+	HEIGHT: 30px;
+	text-align:left;
+}
+
+.ColumnaEntFrameSuperior
+{
+	WIDTH: 787px; 
+	HEIGHT: 16px;
+	text-align:left;
+	vertical-align:middle;
+}
+
+.ColumnaAux2FrameSuperior
+{
+	WIDTH: 526px; 
+	HEIGHT: 30px;
+	text-align:left;
+}

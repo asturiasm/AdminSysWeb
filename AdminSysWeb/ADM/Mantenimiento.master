@@ -1,0 +1,136 @@
+﻿<%@ Master Language="VB" CodeFile="Mantenimiento.master.vb" Inherits="SIGESWeb.ADM_Mantenimiento" %>
+
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <title></title>    
+    <link href="../estilos/Telerik.css" rel="stylesheet" />
+    <LINK href="../Styles.css" type="text/css" rel="stylesheet">
+    <LINK rel="stylesheet" type="text/css" href="../estilos/EstilosGenerales.css">
+         <style type="text/css">
+         div.RadToolBarDropDown .rtbImageOnly
+        {
+            
+        }
+        div.RadToolBarDropDown .rtbImageOnly .rtbIcon
+        {
+            width: 20px;          
+            height: 20px;     
+        }
+        div.RadToolBarDropDown .rtbImageOnly .rtbWrap
+        {
+            height: 0px;          
+        }
+        .hover
+        {
+            background-color: #81BEF7;
+        }
+        .marked
+        {
+            background-color: #58ACFA;
+        }
+
+            /** Columns */
+                .rcbHeader ul,
+                .rcbFooter ul,
+                .rcbItem ul,
+                .rcbHovered ul,
+                .rcbDisabled ul {
+                     margin: 0;
+                     padding: 0;
+                     width: 100%;
+                     display: inline-block;
+                     list-style-type: none;                     
+                }
+
+             .col1 {
+                     margin: 0;
+                     padding: 0 0px 0 0;
+                     width: 60px;
+                     line-height: 14px;
+                     float: left;      
+             }
+                .col {
+                     margin: 0;
+                     padding: 0 0px 0 0;
+                     width: 75px;
+                     line-height: 14px;
+                     float: left;                     
+                }
+  
+                /** Multiple rows and columns */
+                .multipleRowsColumns .rcbItem,
+                .multipleRowsColumns .rcbHovered {
+                     float: left;
+                     margin: 0 1px;
+                     min-height: 13px;
+                     overflow: hidden;
+                     padding: 2px 19px 2px 6px;
+                     width: 125px;
+                }
+              
+            img.rtImg{width: 17px; height: 18px;}
+    </style>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">        
+        <telerik:RadScriptManager ID="ScriptManager1" runat="server"></telerik:RadScriptManager>
+        <telerik:RadAjaxManager ID="radProxy" runat="server">
+            <AjaxSettings>
+                <telerik:AjaxSetting AjaxControlID="RadToolBar1">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="grdMantenimiento" LoadingPanelID="radAjaxLoadingPanel" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+            </AjaxSettings>
+        </telerik:RadAjaxManager>
+        <telerik:RadAjaxLoadingPanel ID="radAjaxLoadingPanel" runat="server" Skin="Default" InitialDelayTime="500" MinDisplayTime="2000"></telerik:RadAjaxLoadingPanel>
+        <div>
+            <asp:ContentPlaceHolder id="TituloPagina" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div style="text-align:left;">
+            <telerik:RadSiteMapDataSource ID="siteMap"  runat="server" SiteMapFile="~/Web.sitemap" StartFromCurrentNode="true" StartingNodeOffset="0"  />
+            <telerik:RadSiteMap ID="BreadCrumbSiteMap" runat="server" DataSourceID="siteMap" RenderMode="Classic" Skin="Office2007" Enabled="false">
+                <LevelSettings>
+                    <telerik:SiteMapLevelSetting Level="0" Layout="Flow" MaximumNodes="5"></telerik:SiteMapLevelSetting>
+                    <telerik:SiteMapLevelSetting Level="1" Layout="Flow" MaximumNodes="5" SeparatorText="/"></telerik:SiteMapLevelSetting>
+                </LevelSettings>
+            </telerik:RadSiteMap>
+        </div>
+        <div style="text-align:left;">
+            <telerik:RadToolBar ID="RadToolBar1" runat="server" Skin="Office2007"></telerik:RadToolBar>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="Datos" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:HiddenField ID="hidObjeto" runat="server" />
+    </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+
+<%--<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>--%>

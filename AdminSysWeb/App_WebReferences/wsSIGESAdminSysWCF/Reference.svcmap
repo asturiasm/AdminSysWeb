@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="51293f90-0901-4474-afcd-1a675908811c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://sigesorvonton/SIGESDataRetrieval/wAdminSysWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wAdminSysWCF.xsd" MetadataType="Schema" ID="c3eea1a0-fe05-47c6-b51c-477bc6bc6d69" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/wAdminSysWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="wAdminSysWCF1.xsd" MetadataType="Schema" ID="7670df7f-d5ee-45a1-850b-0a9cf84c29ae" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/wAdminSysWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="wAdminSysWCF2.xsd" MetadataType="Schema" ID="4e39e40e-0351-4d99-8194-c6c917f17fb9" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/wAdminSysWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="wAdminSysWCF3.xsd" MetadataType="Schema" ID="81ca9bc8-1e3e-4911-9107-ab2b1bfba01d" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/wAdminSysWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="wAdminSysWCF.disco" MetadataType="Disco" ID="9a801e0c-0347-49e5-bffa-f65bc72350c5" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/wAdminSysWCF.svc?disco" />
+    <MetadataFile FileName="wAdminSysWCF.wsdl" MetadataType="Wsdl" ID="7072d6ea-2352-4394-9c8c-0001c074e33b" SourceId="1" SourceUrl="http://sigesorvonton/SIGESDataretrieval/wAdminSysWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

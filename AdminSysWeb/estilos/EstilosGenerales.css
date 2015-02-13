@@ -1,0 +1,123 @@
+/* Hoja de estilos CSS generales de SIGES*/
+/* Aplicados para la correcta visualizacion en navegadores
+   Distintos a Internet Explorer*/
+.TextAreaAmpliado
+{
+	width: 100%;
+	height:100%;
+}
+
+.CuadroTextoAmpliado
+{
+	height:100%;
+	width:100%;
+}
+.ComboBoxContrato
+{
+	Width:100%;
+	Height:25px;
+}
+.CuadroTextoEntrega
+{
+	/*height:100;*/
+	width:80%;
+}
+.CuadroTextoRenglon
+{
+	width: 72px;
+	
+}
+.ComboBoxDetalleOC
+{
+	width: 288px;
+	
+}
+
+.TextoPresupuesto
+{
+	width:50px;
+}
+.MontoPresupuesto
+{
+	width:80px;
+}
+.TextoSerie
+{
+	width:60px;
+}
+
+.TextoFactura
+{
+	width:100px;
+}
+.MontoFactura
+{
+	width:175px;
+}
+
+.ComboDeducciones
+{
+	width:350px;
+	/*height:100%;*/
+	/*width: 100%;*/
+}
+.TextoDeduccion
+{
+	width:75px;
+}
+
+.TextoLiquidacion
+{
+	width:57px;
+}
+
+.ComboBoxLiquidacion
+{
+	width:297px;
+}
+
+.CuadroTextoCabecera
+{
+	/* Cuadros de texto de la Cabecera del CUR*/
+	width:80px;
+}
+
+.TextAreaCabecera
+{
+	width:92%;
+	height:42px;
+}
+.CombosTextoCabecera
+{
+	/*ComboBox utilizados en la cabecera del CUR con 100% de longitud */
+	width: 100%;
+}
+
+.TextoCortoAdmin
+{
+ width:120px;
+}
+.TextoMedianoAdmin
+{
+	width:195px;
+}
+
+.TextoLargoAdmin
+{
+	width:400px;
+}
+
+/**** Objetos comunes width:389px ****/
+.Objeto389px
+{
+	width:389px;
+}
+
+.ColorTextoGrid
+{
+	font-size:7pt;
+	font-family:Comic Sans MS;
+
+}
+
+	

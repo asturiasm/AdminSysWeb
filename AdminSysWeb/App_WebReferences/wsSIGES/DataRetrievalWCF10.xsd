@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Tickets_POCO" elementFormDefault="qualified" targetNamespace="Tickets_POCO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfclsTicketInsumo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsTicketInsumo" nillable="true" type="tns:clsTicketInsumo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsTicketInsumo" nillable="true" type="tns:ArrayOfclsTicketInsumo" />
+  <xs:complexType name="clsTicketInsumo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:clsTicket">
+        <xs:sequence>
+          <xs:element name="Estado" nillable="true" type="xs:string" />
+          <xs:element name="FechaInicio" type="xs:dateTime" />
+          <xs:element name="UsuarioAsignado" nillable="true" type="xs:string" />
+          <xs:element name="UsuarioCreador" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTicketInsumo" nillable="true" type="tns:clsTicketInsumo" />
+  <xs:complexType name="clsTicket">
+    <xs:sequence>
+      <xs:element name="Gestion" type="xs:decimal" />
+      <xs:element name="Nombre" nillable="true" type="xs:string" />
+      <xs:element name="Observaciones" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsTicket" nillable="true" type="tns:clsTicket" />
+  <xs:complexType name="ArrayOfclsTicketReporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsTicketReporte" nillable="true" type="tns:clsTicketReporte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsTicketReporte" nillable="true" type="tns:ArrayOfclsTicketReporte" />
+  <xs:complexType name="clsTicketReporte">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:clsTicketInsumo">
+        <xs:sequence>
+          <xs:element name="CombinacionFinal" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsTicketReporte" nillable="true" type="tns:clsTicketReporte" />
+</xs:schema>
